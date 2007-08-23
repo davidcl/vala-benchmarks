@@ -17,4 +17,9 @@ Programs should use built-in line-oriented I/O functions rather than custom-code
 
 = Status =
 
-Complete [http://vala-benchmarks.googlecode.com/svn/trunk/sumFile/sumcol.vala View]
+Complete
+
+= Source =
+
+[http://vala-benchmarks.googlecode.com/svn/trunk/sumFile/sumcol.vala.html Highlighted Source]
+[http://vala-benchmarks.googlecode.com/svn/trunk/sumFile/sumcol.vala Plain Source]
