@@ -13,7 +13,7 @@ To discuss an implementation of a bench, use the comment. There is at this time 
 = For Developers =
 
 How to find work ?
-    Search with :
+    Search the wiki with :
         * Tag := Featured
         * Words := "Not Planned"
 
@@ -22,5 +22,4 @@ If you want to complete some benchmarks :
     # write code
     # diff the output with a reference gived at http://shootout.alioth.debian.org
     # mail me a version and I will give you a SVN access.
-
 
