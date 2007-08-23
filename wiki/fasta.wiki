@@ -7,7 +7,7 @@ Each program should
 
     * encode the expected cumulative probabilities for 2 alphabets
     * generate DNA sequences, by weighted random selection from the alphabets, using this linear congruential generator
-
+{{{
       IM = 139968
       IA = 3877
       IC = 29573
@@ -16,7 +16,7 @@ Each program should
       Random (Max)
          Seed = (Seed * IA + IC) modulo IM
          = Max * Seed / IM
-
+}}}
     * generate DNA sequences, by copying from a given sequence
     * write 3 sequences line-by-line in FASTA format
 
