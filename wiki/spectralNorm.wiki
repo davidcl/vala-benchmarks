@@ -1,5 +1,5 @@
 #summary Eigenvalue using the power method N=5,500
-#labels Featured
+#labels Featured,Not-Planned
 
 = Rules =
 
