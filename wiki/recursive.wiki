@@ -1,4 +1,4 @@
-#summary recursive benchmark.
+#summary Naive recursive-algorithms: ack fib tak N=11
 #labels Featured
 
 = Rules =
