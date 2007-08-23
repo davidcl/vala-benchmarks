@@ -1,0 +1,17 @@
+#summary Describe how to use this wiki.
+#labels Phase-Design,Phase-Implementation
+
+= Organization =
+
+This wiki use one page per benchmark. The name is the same as in [http://shootout.alioth.debian.org/gp4/benchmark.php?test=all&lang=gcc&lang2=gpp shootout page].
+
+
+= Discussion =
+
+To discuss an implementation of a bench, use the comment. There is at this time no Mailing List to discuss. Use the Vala charoom [irc://irc.gimp.org/#vala] if you want.
+
+= For Developers =
+
+If you have complete some benchmarks, mail me a version and I will give you a SVN access.
+
+
