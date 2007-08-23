@@ -25,3 +25,7 @@ For this benchmark, the fibonnaci and tak implementations should either provide 
 = Status =
 
 Fully complete 
+
+= Source =
+
+[http://vala-benchmarks.googlecode.com/svn/trunk/recursive/recursive.vala Plain Source]
