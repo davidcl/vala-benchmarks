@@ -1,7 +1,7 @@
 /* The Great Computer Language Shootout
    http://shootout.alioth.debian.org/
 
-   contributed by Clément David
+   contributed by ClÃ©ment David
 */
 using GLib;
 using Math;
