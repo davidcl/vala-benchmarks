@@ -21,5 +21,4 @@ Complete
 
 = Source =
 
-[http://vala-benchmarks.googlecode.com/svn/trunk/sumFile/sumcol.vala.html Highlighted Source]
 [http://vala-benchmarks.googlecode.com/svn/trunk/sumFile/sumcol.vala Plain Source]
