@@ -1,5 +1,5 @@
 #summary Indexed-access to boolean-sequence N=9
-#labels Featured
+#labels Featured,Not-Planned
 
 = Rules =
 
