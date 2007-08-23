@@ -1,0 +1,29 @@
+vala-benchmarks
+A collections of some simples benchmarks written in Vala. 
+
+This project aims to implement [http://shootout.alioth.debian.org "The 
+Computer Language Benchmarks Game"] in Vala.
+
+Vala is a new programming language that aims to bring modern programming 
+language features to GNOME developers without imposing any additional 
+runtime requirements and without using a different ABI compared to 
+applications and libraries written in C. The syntax of Vala is similar 
+to C#, modified to better fit the GObject type system.
+
+From Vala FAQ:
+
+    How does the performance of Vala applications compare to other 
+applications?
+
+    The performance should be pretty similar to GObject/C-based code as 
+there is no Vala-specific runtime library/environment that needs to be 
+loaded. The C compiler can also apply the same optimizations on 
+Vala-generated C code and plain GObject/C code. The Vala compiler uses 
+reference counting in more places than most GObject/C-based applications 
+do. However, Vala allows to fine-tune that easily in 
+performance-critical sections with the weak modifier.
+
+If you want to help this project please visit the links:
+   Vala  [http://live.gnome.org/Vala]
+   "The Computer Language Benchmarks Game" [http://shootout.alioth.debian.org]
+   How to help [http://code.google.com/p/vala-benchmarks/wiki/HowTo]
