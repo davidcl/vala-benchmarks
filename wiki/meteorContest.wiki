@@ -25,4 +25,4 @@ The command line parameter N should limit how many solutions will be found befor
 
 = Status =
 
-Planned
+Not Planned
