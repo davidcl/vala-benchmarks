@@ -1,5 +1,5 @@
 #summary Hashtable update and k-nucleotide strings N=1,000,000
-#labels Featured
+#labels Featured,Not-Planned
 
 = Rules =
 
