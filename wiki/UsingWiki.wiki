@@ -15,6 +15,7 @@ To discuss an implementation of a bench, use the comment. There is at this time 
     Search the wiki with :
         * Tag := Featured
         * Words := "Not Planned"
+    or click [http://code.google.com/p/vala-benchmarks/w/list?q=label:Not-Planned here]
 
 If you want to complete some benchmarks :
     # look at the full rules on http://shootout.alioth.debian.org
