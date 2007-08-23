@@ -26,3 +26,7 @@ Each program should use the same naïve iterative double-precision algorithms to
 = Status =
 
 Complete
+
+= Source =
+
+[http://vala-benchmarks.googlecode.com/svn/trunk/partialSums/partialsums.vala Plain Source]
