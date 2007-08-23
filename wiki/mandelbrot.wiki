@@ -7,7 +7,7 @@ http://shootout.alioth.debian.org/mandelbrot200.png
 
 Each program should plot the Mandelbrot set [-1.5-i,0.5+i] on an N-by-N bitmap. Write output byte-by-byte in portable bitmap format.
 
-For more information see Eric W. Weisstein, "Mandelbrot Set." From MathWorld--A Wolfram Web Resource.
+For more information see Eric W. Weisstein, "Mandelbrot Set." From [http://mathworld.wolfram.com MathWorld]--A Wolfram Web Resource.
 http://mathworld.wolfram.com/MandelbrotSet.html
 
 
