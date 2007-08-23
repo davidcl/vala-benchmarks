@@ -9,6 +9,7 @@ The Meteor Puzzle board is made up of 10 rows of 5 hexagonal Cells. There are 10
 
 Print the smallest and largest Meteor Puzzle 50 character solution string in this format to mimic the hexagonal puzzle board:
 
+{{{
 0 0 0 0 1 
  2 2 2 0 1 
 2 6 6 1 1 
@@ -19,7 +20,7 @@ Print the smallest and largest Meteor Puzzle 50 character solution string in thi
  4 4 8 9 3 
 4 7 4 7 9 
  7 7 7 9 9 
-
+}}}
 The command line parameter N should limit how many solutions will be found before the program halts, so that you can work with just a few solutions to debug and optimize your program.
 
 = Status =
