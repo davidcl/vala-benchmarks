@@ -24,4 +24,4 @@ For this benchmark, the fibonnaci and tak implementations should either provide 
 
 = Status =
 
-Fully complete : 
+Fully complete 
