@@ -1,4 +1,4 @@
-# Describe how to help the project
+#summary Describe how to help the project
 
 = Organization =
 
