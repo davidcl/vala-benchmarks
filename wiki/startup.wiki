@@ -10,3 +10,6 @@ This benchmark measures startup costs. It is run differently than the others - e
 = Status =
 
 Complete
+
+= Source =
+[http://vala-benchmarks.googlecode.com/svn/trunk/startup/hello.vala Plain Source]
