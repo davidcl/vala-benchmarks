@@ -1,5 +1,5 @@
 #summary Naive iterative summation: power sin cos N=2,500,000
-#labels Featured
+#labels Featured,Complete
 
 = Rules =
 
