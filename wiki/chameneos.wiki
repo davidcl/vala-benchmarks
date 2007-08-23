@@ -1,5 +1,5 @@
 #summary Symmetrical thread rendez-vous requests N=5,000,000
-#labels Featured
+#labels Featured,Not-Planned
 
 = Rules =
 
