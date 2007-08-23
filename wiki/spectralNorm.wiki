@@ -9,7 +9,7 @@ Each program must implement 4 separate functions / procedures / methods like the
 
 For more information see challenge #3 in Eric W. Weisstein, "Hundred-Dollar, Hundred-Digit Challenge Problems" and "Spectral Norm"
 
-From MathWorld--A Wolfram Web Resource.
+From [http://mathworld.wolfram.com MathWorld] --A Wolfram Web Resource.
 http://mathworld.wolfram.com/Hundred-DollarHundred-DigitChallengeProblems.html
 http://mathworld.wolfram.com/SpectralNorm.html
 
