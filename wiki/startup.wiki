@@ -1,5 +1,5 @@
 #summary Measure 'hello world' program startup time
-#labels Featured,Complet
+#labels Featured,Complete
 
 = Rules =
 
