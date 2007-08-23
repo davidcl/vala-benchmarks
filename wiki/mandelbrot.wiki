@@ -14,3 +14,7 @@ http://mathworld.wolfram.com/MandelbrotSet.html
 = Status =
 
 Finished
+
+= Source =
+
+[http://vala-benchmarks.googlecode.com/svn/trunk/mandelbrot/mandelbrot.vala Plain Source]
