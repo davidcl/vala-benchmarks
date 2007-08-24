@@ -32,9 +32,8 @@ NOTE : The pkg-config options doesn't add running overhead for plain-C.
 As written on [http://www.mono-project.com/CSharp_Compiler#CIL_Optimizations. the Mono website], the C# compiler doesn't make any advanced optimizations, it try to conserve a generic CLI code.
 
 The Mono:Runtime (CLI) make the optimizations especially in the [http://www.mono-project.com/Mono:Runtime#Ahead-of-time_compilation Ahead-of-Time] mode.
-_The `mkbundle` command fail on my computer so AOT mode is not available for me_
+_The `mkbundle` command fails on my computer so AOT mode is not available for me_
 
 So we use a command line like:
    * Compilation : {{{ mcs program.cs }}}
    * Mono:Runtime : {{{ mono -O=all program.exe }}}
-
