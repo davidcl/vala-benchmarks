@@ -19,7 +19,9 @@ As explain above, GCC must do *all the optimizations*. For more informations, re
 
 So we use a command line like :
 {{{
-   gcc -O3 -funroll-loops -ftree-vectorize -fvect-cost-model -ftracer program.c -o program
+   gcc -O3 -funroll-loops -ffast-math -fomit-frame-pointer \
+         -pipe -ftree-vectorize -fvect-cost-model -ftracer \
+         `pkg-config --cflags --libs glib-2.0` program.c -o program 
 }}}
 
 
