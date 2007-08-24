@@ -1,4 +1,5 @@
 #summary Describe how to help the project
+#labels Documentation
 
 = Organization =
 
