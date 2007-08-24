@@ -3,11 +3,6 @@
 ** http://shootout.alioth.debian.org/
 ** contributed by Mike Pall
 ** de-optimized by Isaac Gouy
-**
-** compile with:
-**   gcc -O3 -fomit-frame-pointer -ffast-math -o partialsums partialsums.c -lm
-**   Adding -march=<yourcpu> may help, too.
-**   On a P4/K8 or later try adding: --march=<yourcpu> -mfpmath=sse -msse2
 */
 
 #include <stdio.h>
