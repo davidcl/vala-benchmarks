@@ -3,20 +3,24 @@
 # This file contains some global definitions
 # 
 # Customize this file for your system
+SHELL = /bin/sh
 
 # Compiler PATH
-GCC := /usr/bin/gcc
+GCC := /usr/bin/gcc-3.4
 VALAC := /opt/vala/bin/valac
-MONOC := /usr/bin/gmcs
+MONOC := /usr/bin/mcs
 MONORUN := /usr/bin/mono
 
 # Compiler Options
+#GCCOPTS = -O3 -funroll-loops -ffast-math -fomit-frame-pointer \
+          -ftree-vectorize -ftracer \
+          `pkg-config --cflags --libs gtk+-2.0`
 GCCOPTS = -O3 -funroll-loops -ffast-math -fomit-frame-pointer \
-          -pipe -ftree-vectorize -fvect-cost-model -ftracer \
-          `pkg-config --cflags --libs glib-2.0`
+          -ftracer \
+          `pkg-config --cflags --libs gtk+-2.0`
 VALACOPTS = -C -O 3
 MONOCOPTS = 
-MONORUNOPTS = -O=all
+MONORUNOPTS = -O=all --aot
 
 # Benchmarks to make (same name as directories)
 BENCHS = mandelbrot partialSums recursive startup sumFile
@@ -37,3 +41,4 @@ default:
 	@echo "  make clean     # remove generated/data files"
 
 .EXPORT_ALL_VARIABLES:
+

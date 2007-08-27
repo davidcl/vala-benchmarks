@@ -4,15 +4,21 @@
 include ../../Make.header
 include ../info.txt
 
+all: clean build test bench
+
 test: build
-	$(MONORUN) $(MONORUNOPTS) mandelbrot.exe $(NTEST) > $(MANDELFILE)
-	-@if diff $(MANDELFILE) ../$(MANDELFILE); then echo '>> Mandelbrot: OK'; else echo '>> Mandelbrot: Failed'; fi
+	$(MONORUN) mandelbrot.exe $(NTEST) > $(FILE)
+	$(if diff $(FILE) ../$(FILE), @echo ">> Mandelbrot mono: OK",\
+	 	@echo ">> Mandelbrot mono: Failed")
 
 bench: build
 	
-
+	
 build:
-	$(MONOC) $(MONOCOPTS) mandelbrot.cs 
+	$(MONOC) $(MONOCOPTS) mandelbrot.cs
+#Ahead of time mode
+	$(MONORUN) $(MONORUNOPTS) mandelbrot.exe > /dev/null
 
 clean:
-	rm -fr *~ mandelbrot.exe $(MANDELFILE)
+	rm -fr *~ mandelbrot.exe *.so $(FILE)
+
