@@ -33,6 +33,6 @@ As written on [http://www.mono-project.com/CSharp_Compiler#CIL_Optimizations. th
 
 The Mono:Runtime (CLI) make the optimizations especially in the [http://www.mono-project.com/Mono:Runtime#Ahead-of-time_compilation Ahead-of-Time] mode.
 
-So we use a command line like:
+So we use a command line like to compile:
    * Compilation : {{{ mcs program.cs }}}
-   * Mono:Runtime : {{{ mono -O=all program.exe }}}
+   * Mono:Runtime : {{{ mono -O=all --aot program.exe }}}
