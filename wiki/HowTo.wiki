@@ -29,9 +29,9 @@ If you want to complete some benchmarks :
 The program must be clear and concise. It must return an integer for the status. Please abuse of the documentation.
 
 Conserve the Makefile structure which is really simple to understand :
-* build : build all the test
-* test : diff the output with a [http://shootout.alioth.debian.org/gp4/benchmark.php?test=mandelbrot&lang=all#about standard output]
-* bench : take the benchmark
+  * build : build all the test
+  * test : diff the output with a [http://shootout.alioth.debian.org/gp4/benchmark.php?test=mandelbrot&lang=all#about standard output]
+  * bench : take the benchmark
 
 Exemple :
 {{{
