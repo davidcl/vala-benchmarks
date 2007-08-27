@@ -1,5 +1,5 @@
 # vala-benchmarks 
-# mandelbrot bench makefile
+# partialSums bench makefile
 
 include ../Make.header
 

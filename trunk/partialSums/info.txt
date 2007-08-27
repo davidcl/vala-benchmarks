@@ -1,9 +1,9 @@
 # vala-benchmarks
-# mandelbrot bench information 
+# partialSums bench information 
 
 # Numbers used in the Test and Benchmark
-NTEST = 200
-NBENCH = 3000
+NTEST = 25000
+NBENCH = 2500000
 
 # Generated file and test file name
-FILE = mandelbrot-output.txt
+FILE = partialsums-output.txt

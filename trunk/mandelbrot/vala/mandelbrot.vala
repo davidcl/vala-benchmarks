@@ -32,6 +32,7 @@ public class Mandelbrot {
 			for(int x = 0; x < width; x++){
 				
 				Zr = 0.0; Zi = 0.0;
+				Tr = 0.0; Ti = 0.0;
 				Cr = 2.0*x / width - 1.5;
 				Ci = 2.0*y / height - 1.0;
 				
@@ -55,7 +56,8 @@ public class Mandelbrot {
 				
 				if (bitnum == 8){
 					stdout.putc((char)bits);
-					bits = 0; bitnum = 0;
+					bits = (uint8)0;
+					bitnum = 0;
 				}
 			}
 		}

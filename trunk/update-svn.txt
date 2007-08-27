@@ -1,11 +1,11 @@
 # vala-benchmarks
-# Help for using svn
+## Help for using svn
 
-List all file :
-    find . -not -iwholename *.svn*
+### Delete temp file : 
+        rm -fr `find . -iname *~`
 
-Add all file :
-    svn add `find . -not -iwholename *.svn*`
+### Add all file :
+        svn add `find . -not -iwholename *.svn*`
 
-Commit changes :
-    svn ci -n "BlaBlaBla"
+### Commit changes :
+        svn ci
