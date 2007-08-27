@@ -48,5 +48,8 @@ vala-benchmarks -> mandelbrot -> mono    -> Makefile
                               -> info.txt (Generic bench var.)
                               -> output.txt (ref. file)
 
-                -> Another bench
+                -> ...
+
+                -> Makefile
+                -> Make.header (Generic options)
 }}}
