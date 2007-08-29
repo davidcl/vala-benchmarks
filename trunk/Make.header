@@ -5,28 +5,25 @@
 # Customize this file for your system
 SHELL = /bin/sh
 
-# Compiler PATH
+# PATH
 GCC := /usr/bin/gcc-3.4
 VALAC := /opt/vala/bin/valac
 MONOC := /usr/bin/mcs
 MONORUN := /usr/bin/mono
+TIME := /usr/bin/time -f "%e"
 
 # Compiler Options
 #GCCOPTS = -O3 -funroll-loops -ffast-math -fomit-frame-pointer \
-          -ftree-vectorize -ftracer \
+          -ftree-vectorize -ftracer -lm \
           `pkg-config --cflags --libs gtk+-2.0`
 GCCOPTS = -O3 -funroll-loops -ffast-math -fomit-frame-pointer \
-          -ftracer \
-          `pkg-config --cflags --libs gtk+-2.0`
-VALACOPTS = -C -O 3
+          -ftracer -lm `pkg-config --cflags --libs gtk+-2.0`
+VALACOPTS = -C -O 3 --pkg=math --disable-assert
 MONOCOPTS = 
 MONORUNOPTS = -O=all --aot
 
 # Benchmarks to make (same name as directories)
-BENCHS = mandelbrot partialSums recursive startup sumFile
-
-# Repetition of each bench numbers
-REPEAT = 1
+BENCHS = mandelbrot partialSums  # recursive startup sumFile
 
 ############################################################
 # we define a default rule to tell user what to do 

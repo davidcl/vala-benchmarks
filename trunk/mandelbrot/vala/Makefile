@@ -8,15 +8,16 @@ all: clean build test bench
 
 test: build
 	./mandelbrot $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> Mandelbrot Vala: OK",\
-	 	@echo ">> Mandelbrot Vala: Failed")
+	$(if diff $(FILE) ../$(FILE), @echo ">> mandelbrot Vala: OK",\
+	 	@echo ">> mandelbrot Vala: Failed")
 
 bench: build
-	
+	$(TIME) --output=mandelbrot-vala.csv \
+		./mandelbrot $(NBENCH) > /dev/null
 
 build:
 	$(VALAC) $(VALACOPTS) mandelbrot.vala
 	$(GCC) $(GCCOPTS) mandelbrot.c -o mandelbrot
 
 clean:
-	rm -fr *~ mandelbrot.{c,h} mandelbrot $(FILE)
+	rm -fr *~ mandelbrot.{c,h} mandelbrot $(FILE) *.csv

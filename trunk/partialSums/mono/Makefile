@@ -7,17 +7,19 @@ include ../info.txt
 all: clean build test bench
 
 test: build
-	$(MONORUN) partialSums.exe $(NTEST) > $(FILE)
+	$(MONORUN) partialsums.exe $(NTEST) > $(FILE)
 	$(if diff $(FILE) ../$(FILE), @echo ">> partialSums mono: OK",\
 	 	@echo ">> partialSums mono: Failed")
 
 bench: build
-	
+	$(TIME) --output=partialSums-mono.csv \
+                $(MONORUN) partialsums.exe $(NBENCH) > /dev/null
+
 build:
-	$(MONOC) $(MONOCOPTS) partialSums.cs
+	$(MONOC) $(MONOCOPTS) partialsums.cs
 #Ahead of time mode
-	$(MONORUN) $(MONORUNOPTS) partialSums.exe > /dev/null
+	$(MONORUN) $(MONORUNOPTS) partialsums.exe > /dev/null
 
 clean:
-	rm -fr *~ partialSums.exe *.so $(FILE)
+	rm -fr *~ partialsums.exe *.so $(FILE) partialSums-mono.csv
 
