@@ -19,8 +19,10 @@ public class PartialSums {
 		
 		for(int k=1; k<= n; k++)
 		{
-			double k2 = Math.pow(twothirds, k-1), k3 = k2*k;
-			double sk = Math.sin(k), ck = Math.cos(k);
+			double k2 = Math.pow(twothirds, k-1);
+			double k3 = k2*k;
+			double sk = Math.sin(k);
+			double ck = Math.cos(k);
 			alt = -alt;
 			
 			a1 += Math.pow(twothirds,k-1);
@@ -42,5 +44,7 @@ public class PartialSums {
 		stdout.printf("%.9f\tRiemann Zeta\n", a7);
 		stdout.printf("%.9f\tAlternating Harmonic\n", a8);
 		stdout.printf("%.9f\tGregory\n", a9);
+		
+		return 0;
 	}	
 }
