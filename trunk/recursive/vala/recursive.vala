@@ -16,6 +16,7 @@ public class Recursive {
 		
 		stdout.printf("Fib(3): %d\n", fib(3));
 		stdout.printf("Tak(3.0,2.0,1.0): %.1f\n",takFP(3.0,2.0,1.0));
+		return 0;
 	}
 	
 	public static int ack(int m, int n) {

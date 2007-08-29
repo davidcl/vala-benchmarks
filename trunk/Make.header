@@ -23,7 +23,7 @@ MONOCOPTS =
 MONORUNOPTS = -O=all --aot
 
 # Benchmarks to make (same name as directories)
-BENCHS = mandelbrot partialSums  # recursive startup sumFile
+BENCHS = mandelbrot partialSums recursive # startup sumFile
 
 ############################################################
 # we define a default rule to tell user what to do 
