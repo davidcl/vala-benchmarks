@@ -12,12 +12,14 @@ test: build
 	 	@echo ">> partialSums plain-C: Failed")
 
 bench: build
-	$(TIME) --output=partialSums-plain-C.csv \
+	$(TIME) --output=partialSums-plain-C-time.csv \
                 ./partialsums $(NBENCH) > /dev/null
-		
+	gzip -c ./partialsums |wc -c > partialsums-plain-C-size.csv
+
+
 build:
 	$(GCC) $(GCCOPTS) partialsums.c -o partialsums
 
 clean:
-	rm -fr *~ partialsums $(FILE) partialSums-plain-C.csv
+	rm -fr *~ partialsums $(FILE) *.csv
 

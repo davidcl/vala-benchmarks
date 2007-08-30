@@ -12,8 +12,9 @@ test: build
 	 	@echo ">> mandelbrot mono: Failed")
 
 bench: build
-	$(TIME) --output=mandelbrot-mono.csv \
+	$(TIME) --output=mandelbrot-mono-time.csv \
 		$(MONORUN) mandelbrot.exe $(NBENCH) > /dev/null
+	gzip -c mandelbrot.exe |wc -c > mandelbrot-mono-size.csv
 	
 build:
 	$(MONOC) $(MONOCOPTS) mandelbrot.cs

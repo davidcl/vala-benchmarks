@@ -18,7 +18,7 @@ TIME := /usr/bin/time -f "%e"
           `pkg-config --cflags --libs gtk+-2.0`
 GCCOPTS = -O3 -funroll-loops -ffast-math -fomit-frame-pointer \
           -ftracer -lm `pkg-config --cflags --libs gtk+-2.0`
-VALACOPTS = -C -O 3 --pkg=math --disable-assert
+VALACOPTS = -C --pkg=math --disable-assert
 MONOCOPTS = 
 MONORUNOPTS = -O=all --aot
 

@@ -12,8 +12,9 @@ test: build
 	 	@echo ">> mandelbrot plain-C: Failed")
 
 bench: build
-	$(TIME) --output=mandelbrot-plain-C.csv \
+	$(TIME) --output=mandelbrot-plain-C-time.csv \
 		./mandelbrot $(NBENCH) > /dev/null
+	gzip -c ./mandelbrot |wc -c > mandelbrot-plain-C-size.csv
 
 build:
 	$(GCC) $(GCCOPTS) mandelbrot.c -o mandelbrot

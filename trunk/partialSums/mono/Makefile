@@ -12,8 +12,9 @@ test: build
 	 	@echo ">> partialSums mono: Failed")
 
 bench: build
-	$(TIME) --output=partialSums-mono.csv \
+	$(TIME) --output=partialSums-mono-time.csv \
                 $(MONORUN) partialsums.exe $(NBENCH) > /dev/null
+	gzip -c partialsums.exe |wc -c > partialsums-mono-size.csv
 
 build:
 	$(MONOC) $(MONOCOPTS) partialsums.cs
@@ -21,5 +22,5 @@ build:
 	$(MONORUN) $(MONORUNOPTS) partialsums.exe > /dev/null
 
 clean:
-	rm -fr *~ partialsums.exe *.so $(FILE) partialSums-mono.csv
+	rm -fr *~ partialsums.exe *.so $(FILE) *.csv
 
