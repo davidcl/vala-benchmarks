@@ -12,8 +12,9 @@ test: build
 	 	@echo ">> recursive plain-C: Failed")
 
 bench: build
-	$(TIME) --output=recursive-plain-C.csv \
+	$(TIME) --output=recursive-plain-C-time.csv \
 		./recursive $(NBENCH) > /dev/null
+	gzip -c ./recursive |wc -c > recursive-plain-C-size.csv
 
 build:
 	$(GCC) $(GCCOPTS) recursive.c -o recursive

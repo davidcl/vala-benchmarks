@@ -11,6 +11,7 @@
 
 int main(int argc, char **argv)
 {
+  const double twothirds = 2.0/3.0;
   int k, n = atoi(argv[1]);
   double sum, a;
 
@@ -30,7 +31,7 @@ int main(int argc, char **argv)
 #define kd ((double)k)
 
   sum = 0.0;
-  for (k = 0; k <= n; k++) sum += pow(2.0/3.0, kd);
+  for (k = 0; k <= n; k++) sum += pow(twothirds, kd);
   printf("%.9f\t(2/3)^k\n", sum);
 
   sum = 0.0;

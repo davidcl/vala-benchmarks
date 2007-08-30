@@ -12,13 +12,14 @@ test: build
 	 	@echo ">> partialSums Vala: Failed")
 
 bench: build
-	$(TIME) --output=partialSums-vala.csv \
-                ./partialsums $(NBENCH) > /dev/null	
+	$(TIME) --output=partialSums-vala-time.csv \
+                ./partialsums $(NBENCH) > /dev/null
+	gzip -c ./partialsums |wc -c > partialsums-vala-size.csv
 
 build:
 	$(VALAC) $(VALACOPTS) partialsums.vala	
 	$(GCC) $(GCCOPTS) partialsums.c -o partialsums
 	
 clean:
-	rm -fr *~ partialsums.{c,h} partialsums $(FILE) partialSums-vala.csv
+	rm -fr *~ partialsums.{c,h} partialsums $(FILE) *.csv
 
