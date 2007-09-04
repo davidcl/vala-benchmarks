@@ -18,12 +18,13 @@ TIME := /usr/bin/time -f "%e"
           `pkg-config --cflags --libs gtk+-2.0`
 GCCOPTS = -O3 -funroll-loops -ffast-math -fomit-frame-pointer \
           -ftracer -lm `pkg-config --cflags --libs gtk+-2.0`
-VALACOPTS = -C --pkg=math --disable-assert
+VALACOPTS = -C --disable-assert
 MONOCOPTS = 
 MONORUNOPTS = -O=all --aot
 
 # Benchmarks to make (same name as directories)
-BENCHS = mandelbrot partialSums recursive # startup sumFile
+BENCHS = mandelbrot partialSums recursive sumFile  # startup
+LANGS = mono plain-C vala
 
 ############################################################
 # we define a default rule to tell user what to do 

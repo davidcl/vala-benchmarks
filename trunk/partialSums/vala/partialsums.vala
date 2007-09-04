@@ -4,7 +4,6 @@
    contributed by Clément David
 */
 using GLib;
-using Math;
 
 public class PartialSums {
 	
@@ -19,11 +18,11 @@ public class PartialSums {
 		double a;
 		
 		sum = 0.0;
-		for (k = 0; k <= n; k++) sum += pow(twothirds, ((double)k));
+		for (k = 0; k <= n; k++) sum += Math.pow(twothirds, ((double)k));
 		stdout.printf("%.9f\t(2/3)^k\n", sum);
 
 		sum = 0.0;
-		for (k = 1 ; k <= n; k++) sum += 1/sqrt(((double)k));  /* aka pow(((double)k), -0.5) */
+		for (k = 1 ; k <= n; k++) sum += 1/Math.sqrt(((double)k));  /* aka pow(((double)k), -0.5) */
 		stdout.printf("%.9f\tk^-0.5\n", sum);
 
 		sum = 0.0;
@@ -32,14 +31,14 @@ public class PartialSums {
 
 		sum = 0.0;
 		for (k = 1; k <= n; k++) {
-			double sk = sin(((double)k));
+			double sk = Math.sin(((double)k));
 			sum += 1.0/(((double)k)*((double)k)*((double)k)*sk*sk);
 		}
 		stdout.printf("%.9f\tFlint Hills\n", sum);
 
 		sum = 0.0;
 		for (k = 1; k <= n; k++) {
-		    double ck = cos(((double)k));
+		    double ck = Math.cos(((double)k));
 		    sum += 1.0/(((double)k)*((double)k)*((double)k)*ck*ck);
 		}
 		stdout.printf("%.9f\tCookson Hills\n", sum);
