@@ -14,7 +14,7 @@ test: build
 bench: build
 	$(TIME) --output=mandelbrot-mono-time.csv \
 		$(MONORUN) mandelbrot.exe $(NBENCH) > /dev/null
-	gzip -c mandelbrot.exe |wc -c > mandelbrot-mono-size.csv
+	gzip -c mandelbrot.exe |cat - /usr/bin/mono |wc -c > mandelbrot-mono-size.csv
 	
 build:
 	$(MONOC) $(MONOCOPTS) mandelbrot.cs
