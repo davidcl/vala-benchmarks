@@ -23,7 +23,7 @@ MONOCOPTS =
 MONORUNOPTS = -O=all --aot
 
 # Benchmarks to make (same name as directories)
-BENCHS = mandelbrot partialSums recursive sumFile  # startup
+BENCHS = binaryTrees #mandelbrot partialSums recursive sumFile binaryTrees  # startup
 LANGS = mono plain-C vala
 
 ############################################################

@@ -1,11 +1,11 @@
-﻿/* The Great Computer Language Shootout
+/* The Great Computer Language Shootout
    http://shootout.alioth.debian.org/
 
    contributed by Clément David
 */
 using GLib;
 
-public class Mandelbrot {
+public class Mandelbrot : Object {
 
 	public static int main(string[] args) {
 	
