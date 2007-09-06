@@ -1,0 +1,24 @@
+#summary Results of the current completes benchs.
+#labels Featured,Documentation
+
+The generated results can be found on the on the SVN :
+*  [http://vala-benchmarks.googlecode.com/svn/trunk/bench-time.csv Time bench]
+*  [http://vala-benchmarks.googlecode.com/svn/trunk/bench-size.csv Size bench]
+
+= Time results = 
+
+||Bench Name||Mono||Vala||plain-C||
+||mandelbrot||9.62||2.97||2.60||
+||partialSums||3.37||2.03||2.08||
+||recursive||5.92||3.54||3.52||
+||sumFile||4.34||2.22||2.05||
+||binaryTrees||8.56||4.32||3.21||
+
+= Size results =
+
+||Bench Name||Mono||Vala||plain-C||
+||mandelbrot||1985824||3692||3386||
+||partialSums||1985954||4750||4316||
+||recursive||1985940||4193||3783||
+||sumFile||1985632||3530||3028||
+||binaryTrees||1986002||4633||4177||
