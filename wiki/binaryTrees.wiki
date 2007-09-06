@@ -1,5 +1,5 @@
 #summary Allocate and deallocate many many binary trees N=16
-#labels Featured,Not-Planned
+#labels Featured,Complete
 
 = Rules =
 Each program should
@@ -23,4 +23,4 @@ There are reference implementations in OCaml, C#, and PHP.
 
 = Status =
 
-Not Planned
+Complete
