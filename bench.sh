@@ -12,5 +12,5 @@ do
 done;
 
 # to convert to html (warning: just a note)
-#
 # sed 's|;|</td><td>|g;s|^\(.*\)$|<tr><td>\1</td></tr>|' data.csv > out.html
+# sed 's/;/||/g;s/^\(.*\)$/||\1/' data.csv > out.html

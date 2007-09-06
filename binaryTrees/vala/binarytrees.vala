@@ -43,7 +43,7 @@ public class BinaryTrees : Object {
 		return 0;
 	}
 	
-	class TreeNode : Object  {
+	class TreeNode : Object {
 
 		private long item  {	get; set construct; }
 		private TreeNode left  { get; set construct; }
