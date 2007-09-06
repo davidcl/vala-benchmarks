@@ -11,6 +11,7 @@ do
 	echo $dir';'$(cat `find ./$dir/ |grep size.csv` |tr '\n' ';' |sed 's/;$//') >> bench-size.csv
 done;
 
-# to convert to html (warning: just a note)
+# (warning: just a note)
+# to convert to html and Google Wiki syntax
 # sed 's|;|</td><td>|g;s|^\(.*\)$|<tr><td>\1</td></tr>|' data.csv > out.html
-# sed 's/;/||/g;s/^\(.*\)$/||\1/' data.csv > out.html
+# sed 's/;/||/g;s/^\(.*\)$/||\1||/' data.csv > out.html
