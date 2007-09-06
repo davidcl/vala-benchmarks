@@ -5,7 +5,7 @@
 */
 using GLib;
 
-public class Recursive {
+public class Recursive : Object {
 	static int main (string[] args)
 	{
 		int n = args[1].to_int();

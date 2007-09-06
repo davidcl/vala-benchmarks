@@ -5,7 +5,7 @@
 */
 using GLib;
 
-public class SumCol
+public class SumCol : Object
 {
 	public static int main(string [] args)
 	{

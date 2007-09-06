@@ -5,7 +5,7 @@
 */
 using GLib;
 
-public class PartialSums {
+public class PartialSums : Object {
 	
 	const double twothirds = 2.0/3.0;
 	

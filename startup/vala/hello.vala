@@ -5,7 +5,7 @@
 */
 using GLib;
 
-public class Hello {
+public class Hello : Object {
 	static int main(string[] args) {
 		stdout.printf("hello world\n");
 		return 0;
