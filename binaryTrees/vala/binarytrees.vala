@@ -2,6 +2,7 @@
    http://shootout.alioth.debian.org/
 
    contributed by Clément David
+   revised by Jürg Billeter
 */
 using GLib;
 
@@ -43,26 +44,26 @@ public class BinaryTrees : Object {
 		return 0;
 	}
 	
-	class TreeNode : Object {
+	class TreeNode {
 
-		private long item  {	get; set construct; }
-		private TreeNode left  { get; set construct; }
-		private TreeNode right  { get; set construct; }
+		public long item;
+		public TreeNode left;
+		public TreeNode right;
 		
 		public TreeNode.create_with_item(long item){
 			this.item = item;
 		}
 		
-		public TreeNode.create_full( TreeNode left, TreeNode right, long item)  {
-			this.left = left;
-			this.right = right;
+		public TreeNode( TreeNode# left, TreeNode# right, long item)  {
+			this.left = #left;
+			this.right = #right;
 			this.item = item;
 		}
 		
 		public static TreeNode bottomUpTree (long item, int depth)  {
 			if( depth > 0)
 			{
-				return new TreeNode.create_full(
+				return new TreeNode(
 					bottomUpTree(2*item-1, depth-1) , 
 					bottomUpTree(2*item, depth-1), 
 					item );
