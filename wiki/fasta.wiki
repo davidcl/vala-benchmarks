@@ -1,5 +1,5 @@
 #summary Generate and write random DNA sequences N=25,000,000
-#labels Featured,Not-Planned
+#labels Featured,Planned
 
 = Rules =
 
@@ -24,5 +24,4 @@ We'll use the generated FASTA file as input for other benchmarks ([reverseComple
 
 
 = Status =
-
-Not planned (needed by [reverseComplement] and [kNucleotide]).
+Planned (needed by [reverseComplement] and [kNucleotide]).
