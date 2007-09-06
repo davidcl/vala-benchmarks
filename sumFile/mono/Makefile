@@ -12,10 +12,10 @@ test: build
 	 	@echo ">> sumFile mono: Failed")
 
 bench: build
-	gunzip ../$(GZIPINFILE) -c > ../$(INFILE)
+	$(GZIP) -d ../$(GZIPINFILE) -c > ../$(INFILE)
 	$(TIME) --output=sumFile-mono-time.csv \
 		$(MONORUN) sumcol.exe <../$(INFILE) > /dev/null
-	gzip -c sumcol.exe |cat - /usr/bin/mono |wc -c > mandelbrot-mono-size.csv
+	$(GZIP) -c sumcol.exe |wc -c > mandelbrot-mono-size.csv
 	
 build:
 	$(MONOC) $(MONOCOPTS) sumcol.cs

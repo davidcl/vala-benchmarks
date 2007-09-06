@@ -14,7 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=mandelbrot-plain-C-time.csv \
 		./mandelbrot $(NBENCH) > /dev/null
-	gzip -c ./mandelbrot |wc -c > mandelbrot-plain-C-size.csv
+	$(STRIP) ./mandelbrot
+	$(GZIP) -c ./mandelbrot |wc -c > mandelbrot-plain-C-size.csv
 
 build:
 	$(GCC) $(GCCOPTS) mandelbrot.c -o mandelbrot

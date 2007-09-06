@@ -1,6 +1,4 @@
 Bench Name;Mono;Vala;plain-C
-mandelbrot;9.62;2.97;2.60
-partialSums;3.37;2.03;2.08
-recursive;5.92;3.54;3.52
-sumFile;4.34;2.22;2.05
-binaryTrees;8.56;4.32;3.21
+mandelbrot;9.59;2.95;2.57
+partialSums;3.32;2.03;2.03
+recursive;5.93;3.42;3.49

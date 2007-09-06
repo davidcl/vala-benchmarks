@@ -15,7 +15,8 @@ bench: build
 	gunzip ../$(GZIPINFILE) -c > ../$(INFILE)
 	$(TIME) --output=sumFile-vala-time.csv \
 		./sumcol <../$(INFILE) > /dev/null
-	gzip -c ./sumcol |wc -c > sumFile-vala-size.csv
+	$(STRIP) ./sumcol
+	$(GZIP) -c ./sumcol |wc -c > sumFile-vala-size.csv
 
 build:
 	$(VALAC) $(VALACOPTS) sumcol.vala
