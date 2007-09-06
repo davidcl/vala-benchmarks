@@ -15,7 +15,8 @@ bench: build
 	gunzip ../$(GZIPINFILE) -c > ../$(INFILE)
 	$(TIME) --output=sumFile-plain-C-time.csv \
 		./sumcol <../$(INFILE) > /dev/null
-	gzip -c ./sumcol |wc -c > sumFile-plain-C-size.csv
+	$(STRIP) ./sumcol
+	$(GZIP) -c ./sumcol |wc -c > sumFile-plain-C-size.csv
 
 build:
 	$(GCC) $(GCCOPTS) sumcol.c -o sumcol

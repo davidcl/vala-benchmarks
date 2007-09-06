@@ -11,6 +11,8 @@ VALAC := /opt/vala/bin/valac
 MONOC := /usr/bin/mcs
 MONORUN := /usr/bin/mono
 TIME := /usr/bin/time -f "%e"
+STRIP := /usr/bin/strip -s
+GZIP := /bin/gzip
 
 # Compiler Options
 #GCCOPTS = -O3 -funroll-loops -ffast-math -fomit-frame-pointer \

@@ -1,6 +1,4 @@
 Bench Name;Mono;Vala;plain-C
-mandelbrot;1985824;3692;3386
-partialSums;1985954;4750;4316
-recursive;1985940;4193;3783
-sumFile;1985632;3530;3028
-binaryTrees;1986002;4633;4177
+mandelbrot;29979;31008;30825
+partialSums;30113;32044;31743
+recursive;30098;31456;31178

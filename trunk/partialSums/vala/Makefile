@@ -14,7 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=partialSums-vala-time.csv \
                 ./partialsums $(NBENCH) > /dev/null
-	gzip -c ./partialsums |wc -c > partialsums-vala-size.csv
+	$(STRIP) ./partialsums
+	$(GZIP) -c ./partialsums |wc -c > partialsums-vala-size.csv
 
 build:
 	$(VALAC) $(VALACOPTS) partialsums.vala	

@@ -14,7 +14,7 @@ test: build
 bench: build
 	$(TIME) --output=partialSums-mono-time.csv \
                 $(MONORUN) partialsums.exe $(NBENCH) > /dev/null
-	gzip -c partialsums.exe |cat - /usr/bin/mono |wc -c > partialsums-mono-size.csv
+	$(GZIP) -c partialsums.exe |wc -c > partialsums-mono-size.csv
 
 build:
 	$(MONOC) $(MONOCOPTS) partialsums.cs
