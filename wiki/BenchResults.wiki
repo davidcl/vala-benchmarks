@@ -1,4 +1,4 @@
-#summary Results of the current completes benchs.
+#summary Results of the current completed benchs.
 #labels Featured,Documentation
 
 The generated results can be found on the on the SVN :
