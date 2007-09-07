@@ -12,11 +12,11 @@ test: build
 	 	@echo ">> sumFile Vala: Failed")
 
 bench: build
-	$(GZIP) -d ../$(GZINFILE) -c > ../$(INFILE)
+	gzip -cd ../$(GZINFILE) > ../$(INFILE)
 	$(TIME) --output=sumFile-vala-time.csv \
 		./sumcol <../$(INFILE) > /dev/null
 	$(STRIP) ./sumcol
-	$(GZIP) -c ./sumcol |wc -c > sumFile-vala-size.csv
+	gzip -c ./sumcol |wc -c > sumFile-vala-size.csv
 
 build:
 	$(VALAC) $(VALACOPTS) sumcol.vala

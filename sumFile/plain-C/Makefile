@@ -12,11 +12,11 @@ test: build
 	 	@echo ">> sumFile plain-C: Failed")
 
 bench: build
-	$(GZIP) -d ../$(GZINFILE) -c > ../$(INFILE)
+	gzip -dc ../$(GZINFILE) > ../$(INFILE)
 	$(TIME) --output=sumFile-plain-C-time.csv \
 		./sumcol <../$(INFILE) > /dev/null
 	$(STRIP) ./sumcol
-	$(GZIP) -c ./sumcol |wc -c > sumFile-plain-C-size.csv
+	gzip -c ./sumcol |wc -c > sumFile-plain-C-size.csv
 
 build:
 	$(GCC) $(GCCOPTS) sumcol.c -o sumcol

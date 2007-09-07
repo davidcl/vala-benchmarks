@@ -15,7 +15,7 @@ bench: build
 	$(TIME) --output=partialSums-plain-C-time.csv \
                 ./partialsums $(NBENCH) > /dev/null
 	$(STRIP) ./partialsums
-	$(GZIP) -c ./partialsums |wc -c > partialsums-plain-C-size.csv
+	gzip -c ./partialsums |wc -c > partialsums-plain-C-size.csv
 
 
 build:
