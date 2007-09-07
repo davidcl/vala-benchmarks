@@ -8,13 +8,13 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) sumcol.exe <../$(INTESTFILE) > $(OUTFILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> sumFile mono: OK",\
+	$(if diff $(OUTFILE) ../$(OUTFILE), @echo ">> sumFile mono: OK",\
 	 	@echo ">> sumFile mono: Failed")
 
 bench: build
-	$(GZIP) -d ../$(GZIPINFILE) -c > ../$(INFILE)
+	$(GZIP) -dc ../$(GZINFILE) > ../$(INFILE) ;
 	$(TIME) --output=sumFile-mono-time.csv \
-		$(MONORUN) sumcol.exe <../$(INFILE) > /dev/null
+		$(MONORUN) sumcol.exe <../$(INFILE) > /dev/null ;
 	$(GZIP) -c sumcol.exe |wc -c > mandelbrot-mono-size.csv
 	
 build:
