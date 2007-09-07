@@ -30,6 +30,16 @@ SVN : Fri, 07 Sep 2007 17:40:58 +0000
 
 = Time results = 
 
-
+||Bench Name||Mono||Vala||plain-C||
+||mandelbrot||9.55||2.94||2.59||
+||partialSums||3.30||2.06||2.03||
+||recursive||5.95||3.41||3.49||
+||binaryTrees||8.46||4.28||3.24||
 
 = Size results =
+
+||Bench Name||Mono||Vala||plain-C||
+||mandelbrot||29981||31008||30825||
+||partialSums||30110||32044||31743||
+||recursive||30096||31456||31178||
+||binaryTrees||30159||31817||31519||
