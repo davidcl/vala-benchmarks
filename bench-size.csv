@@ -1,5 +1,5 @@
 Bench Name;Mono;Vala;plain-C
-mandelbrot;29979;31008;30825
-partialSums;30107;32044;31743
-recursive;30097;31456;31178
-binaryTrees;30160;31817;31519
+mandelbrot;29981;31008;30825
+partialSums;30110;32044;31743
+recursive;30096;31456;31178
+binaryTrees;30159;31817;31519
