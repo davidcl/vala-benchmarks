@@ -15,7 +15,7 @@ bench: build
 	$(TIME) --output=mandelbrot-vala-time.csv \
 		./mandelbrot $(NBENCH) > /dev/null
 	$(STRIP) ./mandelbrot
-	$(GZIP) -c ./mandelbrot |wc -c > mandelbrot-vala-size.csv
+	gzip -c ./mandelbrot |wc -c > mandelbrot-vala-size.csv
 
 build:
 	$(VALAC) $(VALACOPTS) mandelbrot.vala

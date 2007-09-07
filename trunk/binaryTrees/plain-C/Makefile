@@ -15,7 +15,7 @@ bench: build
 	$(TIME) --output=binarytrees-plain-C-time.csv \
 		./binarytrees $(NBENCH) > /dev/null
 	$(STRIP) ./binarytrees
-	$(GZIP) -c ./binarytrees |wc -c > binarytrees-plain-C-size.csv
+	gzip -c ./binarytrees |wc -c > binarytrees-plain-C-size.csv
 
 build:
 	$(GCC) $(GCCOPTS) binarytrees.c -o binarytrees

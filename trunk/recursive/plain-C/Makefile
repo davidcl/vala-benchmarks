@@ -15,7 +15,7 @@ bench: build
 	$(TIME) --output=recursive-plain-C-time.csv \
 		./recursive $(NBENCH) > /dev/null
 	$(STRIP) ./recursive
-	$(GZIP) -c ./recursive |wc -c > recursive-plain-C-size.csv
+	gzip -c ./recursive |wc -c > recursive-plain-C-size.csv
 
 build:
 	$(GCC) $(GCCOPTS) recursive.c -o recursive
