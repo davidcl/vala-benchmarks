@@ -5,6 +5,29 @@ The generated results can be found on the on the SVN :
 *  [http://vala-benchmarks.googlecode.com/svn/trunk/bench-time.csv Time bench]
 *  [http://vala-benchmarks.googlecode.com/svn/trunk/bench-size.csv Size bench]
 
+= Versions =
+
+  == mono -V : ==
+{{{
+Mono JIT compiler version 1.2.4 (tarball)
+Copyright (C) 2002-2007 Novell, Inc and Contributors. www.mono-project.com
+        TLS:           __thread
+        GC:            Included Boehm (with typed GC)
+        SIGSEGV:       altstack
+        Architecture:  x86
+        Disabled:      none
+}}}
+
+  == gcc -v : ==
+{{{
+version gcc 3.4.6 (Debian 3.4.6-6)
+}}}
+
+  == vala : ==
+{{{
+SVN : Fri, 07 Sep 2007 17:40:58 +0000
+}}}
+
 = Time results = 
 
 
