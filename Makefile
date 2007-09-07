@@ -9,7 +9,6 @@ build test:
 	for dir in $(LANGS); do ( cd $$dir; make $@ ); done  ); done
 	
 bench:
-	rm -f bench.csv
 	-@for directory in $(BENCHS); do ( cd $$directory; \
 	for dir in $(LANGS); do ( cd $$dir; make $@ ); done  ); done
 	$(SH) ./bench.sh $(BENCHS)

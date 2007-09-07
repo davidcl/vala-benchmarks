@@ -12,7 +12,7 @@ test: build
 	 	@echo ">> sumFile plain-C: Failed")
 
 bench: build
-	gunzip ../$(GZIPINFILE) -c > ../$(INFILE)
+	$(GZIP) -d ../$(GZINFILE) -c > ../$(INFILE)
 	$(TIME) --output=sumFile-plain-C-time.csv \
 		./sumcol <../$(INFILE) > /dev/null
 	$(STRIP) ./sumcol
