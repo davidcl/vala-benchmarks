@@ -25,7 +25,7 @@ version gcc 3.4.6 (Debian 3.4.6-6)
 
   == valac : ==
 {{{
-SVN : Fri, 07 Sep 2007 17:40:58 +0000
+SVN rev 590
 }}}
 
 
