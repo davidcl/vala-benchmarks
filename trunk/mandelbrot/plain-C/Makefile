@@ -1,5 +1,5 @@
 # vala-benchmarks
-# mandelbrot plain-C bench makefile
+# spectralNorm plain-C bench makefile
 
 include ../../Make.header
 include ../info.txt
@@ -7,19 +7,19 @@ include ../info.txt
 all: clean build test bench
 
 test: build
-	./mandelbrot $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> mandelbrot plain-C: OK",\
-	 	@echo ">> mandelbrot plain-C: Failed")
+	./spectralnorm $(NTEST) > $(FILE)
+	$(if diff $(FILE) ../$(FILE), @echo ">> spectralNorm plain-C: OK",\
+	 	@echo ">> spectralNorm plain-C: Failed")
 
 bench: build
-	$(TIME) --output=mandelbrot-plain-C-time.csv \
-		./mandelbrot $(NBENCH) > /dev/null
-	$(STRIP) ./mandelbrot
-	gzip -c ./mandelbrot |wc -c > mandelbrot-plain-C-size.csv
+	$(TIME) --output=spectralnorm-plain-C-time.csv \
+		./spectralnorm $(NBENCH) > /dev/null
+	$(STRIP) ./spectralnorm
+	gzip -c ./spectralnorm |wc -c > spectralnorm-plain-C-size.csv
 
 build:
-	$(GCC) $(GCCOPTS) mandelbrot.c -o mandelbrot
+	$(GCC) $(GCCOPTS) spectralnorm.c -o spectralnorm
 
 clean:
-	rm -fr *~ mandelbrot $(FILE) *.csv
+	rm -fr *~ spectralnorm $(FILE) *.csv
 

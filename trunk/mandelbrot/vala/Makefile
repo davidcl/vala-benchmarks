@@ -1,5 +1,5 @@
 # vala-benchmarks
-# mandelbrot vala bench makefile
+# spectralNorm vala bench makefile
 
 include ../../Make.header
 include ../info.txt
@@ -7,19 +7,19 @@ include ../info.txt
 all: clean build test bench
 
 test: build
-	./mandelbrot $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> mandelbrot Vala: OK",\
-	 	@echo ">> mandelbrot Vala: Failed")
+	./spectralnorm $(NTEST) > $(FILE)
+	$(if diff $(FILE) ../$(FILE), @echo ">> spectralNorm Vala: OK",\
+	 	@echo ">> spectralNorm Vala: Failed")
 
 bench: build
-	$(TIME) --output=mandelbrot-vala-time.csv \
-		./mandelbrot $(NBENCH) > /dev/null
-	$(STRIP) ./mandelbrot
-	gzip -c ./mandelbrot |wc -c > mandelbrot-vala-size.csv
+	$(TIME) --output=spectralnorm-vala-time.csv \
+		./spectralnorm $(NBENCH) > /dev/null
+	$(STRIP) ./spectralnorm
+	gzip -c ./spectralnorm |wc -c > spectralnorm-vala-size.csv
 
 build:
-	$(VALAC) $(VALACOPTS) mandelbrot.vala
-	$(GCC) $(GCCOPTS) mandelbrot.c -o mandelbrot
+	$(VALAC) $(VALACOPTS) spectralnorm.vala
+	$(GCC) $(GCCOPTS) spectralnorm.c -o spectralnorm
 
 clean:
-	rm -fr *~ mandelbrot.{c,h} mandelbrot $(FILE) *.csv
+	rm -fr *~ spectralnorm.{c,h} spectralnorm $(FILE) *.csv
