@@ -15,4 +15,4 @@ http://mathworld.wolfram.com/SpectralNorm.html
 
 = Status =
 
-Not Planned
+Planned
