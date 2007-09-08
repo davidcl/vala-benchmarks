@@ -18,4 +18,4 @@ FANNKUCH is an abbreviation for the German word Pfannkuchen, or pancakes, in ana
 
 = Status =
 
-Not planned
+Complete
