@@ -1,5 +1,5 @@
 #summary Indexed-access to tiny integer-sequence N=11
-#labels Featured,Not-Planned
+#labels Featured,Complete
 
 = Rules =
 
