@@ -1,0 +1,26 @@
+# vala-benchmarks
+# fannkuch mono bench makefile
+
+include ../../Make.header
+include ../info.txt
+
+all: clean build test bench
+
+test: build
+	$(MONORUN) fannkuch.exe $(NTEST) > $(FILE)
+	$(if diff $(FILE) ../$(FILE), @echo ">> fannkuch mono: OK",\
+	 	@echo ">> fannkuch mono: Failed")
+
+bench: build
+	$(TIME) --output=fannkuch-mono-time.csv \
+		$(MONORUN) fannkuch.exe $(NBENCH) > /dev/null
+	gzip -c fannkuch.exe |wc -c > fannkuch-mono-size.csv
+	
+build:
+	$(MONOC) $(MONOCOPTS) fannkuch.cs
+#Ahead of time mode
+	$(MONORUN) $(MONORUNOPTS) fannkuch.exe > /dev/null
+
+clean:
+	rm -fr *~ fannkuch.exe *.so $(FILE) *.csv
+

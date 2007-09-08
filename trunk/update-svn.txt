@@ -8,4 +8,4 @@
         svn add `find . -not -iwholename *.svn*`
 
 ### Commit changes :
-        svn ci
+        svn ci `find . -not -iwholename *.svn*`
