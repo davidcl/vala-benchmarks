@@ -1,0 +1,25 @@
+# vala-benchmarks
+# nsieve vala bench makefile
+
+include ../../Make.header
+include ../info.txt
+
+all: clean build test bench
+
+test: build
+	./nsieve2 $(NTEST) > $(FILE)
+	$(if diff $(FILE) ../$(FILE), @echo ">> nsieve2 Vala: OK",\
+	 	@echo ">> nsieve2 Vala: Failed")
+
+bench: build
+	$(TIME) --output=nsieve-vala-time.csv \
+		./nsieve2 $(NBENCH) > /dev/null
+	$(STRIP) ./nsieve2
+	gzip -c ./nsieve2 |wc -c > nsieve-vala-size.csv
+
+build:
+	$(VALAC) $(VALACOPTS) nsieve2.vala
+	$(GCC) $(GCCOPTS) nsieve2.c -o nsieve2
+
+clean:
+	rm -fr *~ nsieve2.{c,h} nsieve2 $(FILE) *.csv
