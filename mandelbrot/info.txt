@@ -1,9 +1,9 @@
 # vala-benchmarks
-# spectralNorm bench information 
+# mandelbrot bench information 
 
 # Numbers used in the Test and Benchmark
-NTEST = 100
-NBENCH = 5500
+NTEST = 200
+NBENCH = 4000
 
 # Generated file and test file name
-FILE = spectralnorm-output.txt
+FILE = mandelbrot-output.txt

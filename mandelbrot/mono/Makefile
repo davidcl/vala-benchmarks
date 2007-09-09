@@ -1,5 +1,5 @@
 # vala-benchmarks
-# spectralNorm mono bench makefile
+# mandelbrot mono bench makefile
 
 include ../../Make.header
 include ../info.txt
@@ -7,20 +7,20 @@ include ../info.txt
 all: clean build test bench
 
 test: build
-	$(MONORUN) spectralnorm.exe $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> spectralNorm mono: OK",\
-	 	@echo ">> spectralNorm mono: Failed")
+	$(MONORUN) mandelbrot.exe $(NTEST) > $(FILE)
+	$(if diff $(FILE) ../$(FILE), @echo ">> mandelbrot mono: OK",\
+	 	@echo ">> mandelbrot mono: Failed")
 
 bench: build
-	$(TIME) --output=spectralnorm-mono-time.csv \
-		$(MONORUN) spectralnorm.exe $(NBENCH) > /dev/null
-	gzip -c spectralnorm.exe |wc -c > spectralnorm-mono-size.csv
+	$(TIME) --output=mandelbrot-mono-time.csv \
+		$(MONORUN) mandelbrot.exe $(NBENCH) > /dev/null
+	gzip -c mandelbrot.exe |wc -c > mandelbrot-mono-size.csv
 	
 build:
-	$(MONOC) $(MONOCOPTS) spectralnorm.cs
+	$(MONOC) $(MONOCOPTS) mandelbrot.cs
 #Ahead of time mode
-	$(MONORUN) $(MONORUNOPTS) spectralnorm.exe > /dev/null
+	$(MONORUN) $(MONORUNOPTS) mandelbrot.exe > /dev/null
 
 clean:
-	rm -fr *~ spectralnorm.exe *.so $(FILE) *.csv
+	rm -fr *~ mandelbrot.exe *.so $(FILE) *.csv
 

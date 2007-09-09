@@ -1,8 +1,9 @@
 Bench Name;Mono;Vala;plain-C
-mandelbrot;1284;2311;2128
-partialSums;1411;3347;3046
-recursive;1402;2759;2481
-binaryTrees;1465;3120;2822
-sumFile;1090;2137;1780
+mandelbrot;1283;2387;2128
+partialSums;1412;3419;3046
+recursive;1402;2833;2481
+binaryTrees;1461;3181;2822
+sumFile;1093;2199;1780
 fannkuch;1378;3221;2717
-spectralNorm;1418;3004;3888
+spectralNorm;1417;3004;3888
+nsieve;1172;2395;1907
