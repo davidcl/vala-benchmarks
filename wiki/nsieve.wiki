@@ -1,5 +1,5 @@
 #summary Indexed-access to boolean-sequence N=9
-#labels Featured,Not-Planned
+#labels Featured,Complete
 
 = Rules =
 
@@ -18,4 +18,4 @@ The basic benchmark was described in "A High-Level Language Benchmark." BYTE, Se
 
 = Status =
 
-Not Planned
+Complete
