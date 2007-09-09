@@ -2,31 +2,31 @@
    http://shootout.alioth.debian.org/
 
    contributed by Clément David
+   revised by Jürg Billeter
 */
 using GLib;
 
-public class NSieve {
+class NSieve {
 	
-	public static int main(string[] args) {
+	static int main(string[] args) {
 		
-		int m = (args.length > 0)?args[1].to_int():2;	
+		int m = args[1].to_int();	
 		
 		for (int i = 0; i < 3; i++)
-        	nsieve(10000 << (m-i));
+	        	nsieve(10000 << (m-i));
 		
 		return 0;
 	}
 	
-	public static void nsieve( int m ) {
+	static void nsieve( int m ) {
 	
-		bool[] flags = new bool[m+1];
+		char[] flags = new char[m];
 		
-		for (int i=2; i <= m; i++) flags[i] = true;	
 		int count = 0;
 		
-		for( int i=2; i<=m; i++) {
-			if( flags[i] ) {
-				for (int k=i+i; k <= m; k+=i) flags[k] = false;
+		for( int i=2; i<m; i++) {
+			if( flags[i] == 0 ) {
+				for (int j=i << 1; j < m; j+=i) flags[j] = (char) 1;
 				++count;	
 			}
 		}
