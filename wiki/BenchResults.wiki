@@ -32,23 +32,24 @@ SVN rev 594
 = Time results = 
 
 ||Bench Name||Mono||Vala||plain-C||
-||mandelbrot||17.07||5.23||4.55||
-||partialSums||33.51||21.08||21.13||
-||recursive||5.93||3.42||3.48||
-||binaryTrees||8.46||4.20||3.22||
-||sumFile||4.29||2.17||2.03||
-||fannkuch||16.07||8.59||5.82||
-||spectralNorm||36.60||24.02||22.41||
-||nsieve||5.54||6.98||5.02||
+||mandelbrot||17.00||5.22||4.56||
+||partialSums||33.41||21.33||21.13||
+||recursive||5.87||3.41||3.52||
+||binaryTrees||8.52||4.20||3.22||
+||sumFile||5.88||2.19||2.02||
+||fannkuch||16.07||8.60||5.81||
+||spectralNorm||32.93||24.03||22.34||
+||nsieve||5.53||5.00||5.02||
+
 
 = Size results =
 
 ||Bench Name||Mono||Vala||plain-C||
-||mandelbrot||1286||2387||2128||
+||mandelbrot||1282||2387||2128||
 ||partialSums||1412||3419||3046||
-||recursive||1402||2833||2481||
-||binaryTrees||1462||3181||2822||
+||recursive||1400||2833||2481||
+||binaryTrees||1464||3181||2822||
 ||sumFile||1093||2199||1780||
-||fannkuch||1379||3221||2717||
-||spectralNorm||1417||3004||3888||
-||nsieve||1171||2395||1907||
+||fannkuch||1378||3221||2717||
+||spectralNorm||1419||3004||3888||
+||nsieve||1171||1905||1907||
