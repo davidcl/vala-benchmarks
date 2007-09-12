@@ -9,10 +9,21 @@ public class nsieveBits {
 
 	static int main(string[] args) {
 		
-		int n = (args.length > 0)?args[1].to_int():2;
+		int n = args[1].to_int();
 		
-		int m = (1<<n)*10000;
-		ByteArray flags = new ByteArray.sized(true,false,1,
+		uint32 count1 = 0;
+		uint32 count2 = 0;
+		uint32 count4 = 0;
+		
+		uint32 i;
+		uint32 j;
+		uint32 m;
+		uint32 m2;
+		uint32 flags;
+		
+		m = 10000 << n;
+		
+		
 		
 		return 0;
 	}

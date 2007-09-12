@@ -32,6 +32,7 @@ struct _FastaClass {
 	GObjectClass parent;
 };
 
+Fasta* fasta_new (void);
 GType fasta_get_type (void);
 
 G_END_DECLS
