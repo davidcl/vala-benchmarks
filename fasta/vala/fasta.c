@@ -229,6 +229,13 @@ static void fasta_MakeRepeatFasta (const char* id, const char* desc, int alu_len
 }
 
 
+Fasta* fasta_new (void) {
+	Fasta * self;
+	self = g_object_newv (TYPE_FASTA, 0, NULL);
+	return self;
+}
+
+
 static FastaFrequency* fasta_frequency_new (gchar c, double p) {
 	GParameter * __params;
 	GParameter * __params_it;

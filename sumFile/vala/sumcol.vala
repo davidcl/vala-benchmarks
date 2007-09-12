@@ -20,5 +20,6 @@ public class SumCol : Object
 		}
 		
 		stdout.printf("%d\n",sum);
+		return 0;
 	}
 }
