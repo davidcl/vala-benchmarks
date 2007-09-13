@@ -1,4 +1,4 @@
-#summary Indexed-access to boolean-sequence N=12
+#summary Indexed-access to boolean-sequence N=14
 #labels Featured,Complete
 
 = Rules =
