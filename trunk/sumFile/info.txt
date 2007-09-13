@@ -6,7 +6,7 @@ OUTFILE = sumcol-output.txt
 INTESTFILE = sumcol-input.txt
 
 # Bench filename
-# The bench is just a 105-repeat of the test
+# The bench is just a 420-repeat of the test
 INFILE = sumcol-full-input.txt
 GZINFILE = sumcol-full-input.txt.gz
 
