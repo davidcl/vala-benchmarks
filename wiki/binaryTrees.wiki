@@ -1,4 +1,4 @@
-#summary Allocate and deallocate many many binary trees N=16
+#summary Allocate and deallocate many many binary trees N=17
 #labels Featured,Complete
 
 = Rules =
