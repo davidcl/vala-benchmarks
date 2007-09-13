@@ -33,7 +33,7 @@ SVN rev 600
 
 http://vala-benchmarks.googlecode.com/svn/trunk/bench-time.png
 
-||BenchName||Mono||Vala||plain-C||
+||Bench Name||Mono||Vala||plain-C||
 ||mandelbrot||29.25||8.70||7.07||
 ||partialSums||34.23||21.06||21.06||
 ||recursive||17.98||9.04||8.24||
@@ -48,7 +48,7 @@ http://vala-benchmarks.googlecode.com/svn/trunk/bench-time.png
 
 http://vala-benchmarks.googlecode.com/svn/trunk/bench-size.png
 
-||BenchName||Mono||Vala||plain-C||
+||Bench Name||Mono||Vala||plain-C||
 ||mandelbrot||1282||2465||2118||
 ||partialSums||1413||4701||4333||
 ||recursive||1397||4821||4652||
