@@ -3,7 +3,7 @@
 
 # Numbers used in the Test and Benchmark
 NTEST = 3
-NBENCH = 11
+NBENCH = 12
 
 # Generated file and test file name
 FILE = recursive-output.txt
