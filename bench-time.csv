@@ -1,9 +1,9 @@
 BenchName;Mono;Vala;plain-C
-mandelbrot;29.25;8.70;7.07
-partialSums;34.23;21.06;21.06
-recursive;17.98;9.04;8.24
-binaryTrees;19.05;8.07;5.67
-sumFile;17.69;8.86;8.26
-fannkuch;16.20;6.74;6.27
-spectralNorm;29.82;20.21;19.71
-nsieve;23.63;22.04;21.99
+mandelbrot;33.09;8.71;7.07
+partialSums;34.59;21.22;21.26
+recursive;17.91;8.94;8.22
+binaryTrees;19.16;8.20;5.70
+sumFile;18.06;8.83;8.24
+fannkuch;15.93;6.97;6.31
+spectralNorm;29.86;20.07;20.04
+nsieve;23.17;21.80;21.74
