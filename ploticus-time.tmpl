@@ -7,7 +7,7 @@
 #proc page
 pagesize: 7 4
 #if @DEVICE in gif,png
-  scale: 1.5
+  scale: 1
 #endif
 
 #proc getdata
@@ -22,12 +22,12 @@ fieldnameheader: yes
 #proc areadef
 title: Time Results
 rectangle: 1 1 6 3
-xrange: 0 @XMAX
-yrange: 0 40  // no way currently to do autorange on variable # of fields
-xaxis.stubs: datafield=1
-xaxis.label: Bench Name
-yaxis.stubs: inc 10
-yaxis.label: Time(s)
+yrange: 0 @XMAX
+xrange: 0 40  // no way currently to do autorange on variable # of fields
+yaxis.stubs: datafield=1
+yaxis.label: 
+xaxis.stubs: inc 5
+xaxis.label: Time(s)
 
 // initialize loop variables
 #set I = 2
@@ -43,13 +43,14 @@ yaxis.label: Time(s)
 
   // do bars
   #proc bars
+  horizontalbars: yes
   lenfield: @I
   cluster: @ICLUST / @NCLUST
   color: @COLOR
 #hideund
   legendlabel: @FNAME
 #showund
-  barwidth: 0.1
+  barwidth: 0.06
 
   // update I and see if time to stop..
   #set I = $arith(@I+1)
