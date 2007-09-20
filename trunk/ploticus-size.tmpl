@@ -7,7 +7,7 @@
 #proc page
 pagesize: 7 4
 #if @DEVICE in gif,png
-  scale: 1.5
+  scale: 1
 #endif
 
 #proc getdata
@@ -22,12 +22,12 @@ fieldnameheader: yes
 #proc areadef
 title: Size Results
 rectangle: 1 1 6 3
-xrange: 0 @XMAX
-yrange: 0 5000  // no way currently to do autorange on variable # of fields
-xaxis.stubs: datafield=1
-xaxis.label: Bench Name
-yaxis.stubs: inc 500
-yaxis.label: Size(GZbytes)
+yrange: 0 @XMAX
+xrange: 0 5000  // no way currently to do autorange on variable # of fields
+yaxis.stubs: datafield=1
+yaxis.label: 
+xaxis.stubs: inc 500
+xaxis.label: Size(GZbytes)
 
 // initialize loop variables
 #set I = 2
@@ -43,13 +43,14 @@ yaxis.label: Size(GZbytes)
 
   // do bars
   #proc bars
+  horizontalbars: yes
   lenfield: @I
   cluster: @ICLUST / @NCLUST
   color: @COLOR
 #hideund
   legendlabel: @FNAME
 #showund
-  barwidth: 0.1
+  barwidth: 0.05
 
   // update I and see if time to stop..
   #set I = $arith(@I+1)
@@ -61,7 +62,7 @@ yaxis.label: Size(GZbytes)
 // slap on the legend
 #proc legend
 format: singleline
-location: 1 0.5
+location: 3 0.5
 sep: 0.5
 
 // here's the data
