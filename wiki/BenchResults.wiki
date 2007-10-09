@@ -57,3 +57,14 @@ http://vala-benchmarks.googlecode.com/svn/trunk/bench-size.png
 ||fannkuch||1381||3425||2787||
 ||spectralNorm||1416||3162||3533||
 ||nsieve||1172||1939||1873||
+
+
+= Size results =
+
+The method of memory measurement is pretty simple :
+{{{
+time --format %M
+}}}
+The project's goal is to become part of "The Computer Language Benchmarks Game".
+
+http://vala-benchmarks.googlecode.com/svn/trunk/bench-mem.png
