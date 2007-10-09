@@ -59,7 +59,7 @@ http://vala-benchmarks.googlecode.com/svn/trunk/bench-size.png
 ||nsieve||1172||1939||1873||
 
 
-= Size results =
+= Memory consumed results =
 
 The method of memory measurement is pretty simple :
 {{{
