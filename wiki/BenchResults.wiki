@@ -63,8 +63,11 @@ http://vala-benchmarks.googlecode.com/svn/trunk/bench-size.png
 
 The method of memory measurement is pretty simple :
 {{{
-time --format %M
+time --format=%M
+
+    %M :Maximum resident set  size  of  the  process
+    during its lifetime, in Kilobytes.
 }}}
-The project's goal is to become part of "The Computer Language Benchmarks Game".
+The project's goal is to become part of "The Computer Language Benchmarks Game", not to implement complex memory measurement :).
 
 http://vala-benchmarks.googlecode.com/svn/trunk/bench-mem.png
