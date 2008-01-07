@@ -70,4 +70,4 @@ time --format=%M
 }}}
 The project's goal is to become part of "The Computer Language Benchmarks Game", not to implement complex memory measurement systems :).
 
-http://vala-benchmarks.googlecode.com/svn/trunk/bench-mem.png
+_due to the time command bug, these results are not available_
