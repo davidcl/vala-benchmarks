@@ -9,23 +9,24 @@ The generated results can be found on the on the SVN :
 
   == mono -V : ==
 {{{
-Mono JIT compiler version 1.2.5 (tarball)
+Mono JIT compiler version 1.2.6 (tarball)
 Copyright (C) 2002-2007 Novell, Inc and Contributors. www.mono-project.com
-        TLS:           __thread
-        GC:            Included Boehm (with typed GC)
-        SIGSEGV:       altstack
-        Architecture:  x86
-        Disabled:      none
+	TLS:           __thread
+	GC:            Included Boehm (with typed GC)
+	SIGSEGV:       altstack
+	Notifications: epoll
+	Architecture:  x86
+	Disabled:      none
 }}}
 
   == gcc -v : ==
 {{{
-gcc version 4.2.1 (Debian 4.2.1-3)
+gcc version 4.2.3 20071123 (prerelease) (Debian 4.2.2-4)
 }}}
 
   == valac : ==
 {{{
-SVN rev 600
+Vala 0.1.6
 }}}
 
 
