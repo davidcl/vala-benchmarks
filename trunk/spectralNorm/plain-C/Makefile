@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=spectralnorm-plain-C-time.csv \
 		./spectralnorm $(NBENCH) > /dev/null
+	$(MEMORY) --output=spectralnorm-plain-C-mem.csv \
+		./spectralnorm $(NBENCH) > /dev/null
 	$(STRIP) ./spectralnorm
 	gzip -c ./spectralnorm |wc -c > spectralnorm-plain-C-size.csv
 

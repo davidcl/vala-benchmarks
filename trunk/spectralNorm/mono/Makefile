@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=spectralnorm-mono-time.csv \
 		$(MONORUN) spectralnorm.exe $(NBENCH) > /dev/null
+	$(MEMORY) --output=spectralnorm-mono-mem.csv \
+		$(MONORUN) spectralnorm.exe $(NBENCH) > /dev/null
 	gzip -c spectralnorm.exe |wc -c > spectralnorm-mono-size.csv
 	
 build:

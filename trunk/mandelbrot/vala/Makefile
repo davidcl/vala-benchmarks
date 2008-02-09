@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=mandelbrot-vala-time.csv \
 		./mandelbrot $(NBENCH) > /dev/null
+	$(MEMORY) --output=mandelbrot-vala-mem.csv \
+		./mandelbrot $(NBENCH) > /dev/null
 	$(STRIP) ./mandelbrot
 	gzip -c ./mandelbrot |wc -c > mandelbrot-vala-size.csv
 

@@ -17,4 +17,4 @@ clean:
 	-@for directory in $(BENCHS); do ( cd $$directory; \
 	for dir in $(LANGS); do ( cd $$dir; make $@ ); done  ); done
 #	rm -fr *.csv
-	rm -fr `find . -iname *~`
+	rm -fr `find . -iname "*~"`

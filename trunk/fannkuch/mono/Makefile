@@ -15,6 +15,8 @@ bench: build
 	$(TIME) --output=fannkuch-mono-time.csv \
 		$(MONORUN) fannkuch.exe $(NBENCH) > /dev/null
 	gzip -c fannkuch.exe |wc -c > fannkuch-mono-size.csv
+	$(MEMORY) --output=fannkuch-mono-mem.csv \
+		$(MONORUN) fannkuch.exe $(NBENCH) > /dev/null
 	
 build:
 	$(MONOC) $(MONOCOPTS) fannkuch.cs

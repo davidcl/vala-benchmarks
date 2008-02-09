@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=fasta-mono-time.csv \
 		$(MONORUN) fasta.exe $(NBENCH) > /dev/null
+	$(MEMORY) --output=fasta-mono-mem.csv \
+		$(MONORUN) fasta.exe $(NBENCH) > /dev/null
 	gzip -c fasta.exe |wc -c > fasta-mono-size.csv
 	
 build:

@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=binarytrees-vala-time.csv \
 		./binarytrees $(NBENCH) > /dev/null
+	$(MEMORY) --output=binarytrees-vala-mem.csv \
+		./binarytrees $(NBENCH) > /dev/null
 	$(STRIP) ./binarytrees
 	gzip -c ./binarytrees |wc -c > binarytrees-vala-size.csv
 

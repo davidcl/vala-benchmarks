@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=spectralnorm-vala-time.csv \
 		./spectralnorm $(NBENCH) > /dev/null
+	$(MEMORY) --output=spectralnorm-vala-mem.csv \
+		./spectralnorm $(NBENCH) > /dev/null
 	$(STRIP) ./spectralnorm
 	gzip -c ./spectralnorm |wc -c > spectralnorm-vala-size.csv
 

@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=nsievebits-plain-C-time.csv \
 		./nsievebits $(NBENCH) > /dev/null
+	$(MEMORY) --output=nsievebits-plain-C-mem.csv \
+		./nsievebits $(NBENCH) > /dev/null
 	$(STRIP) ./nsievebits
 	gzip -c ./nsievebits |wc -c > nsievebits-plain-C-size.csv
 

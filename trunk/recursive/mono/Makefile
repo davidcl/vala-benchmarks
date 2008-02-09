@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=recursive-mono-time.csv \
 		$(MONORUN) recursive.exe $(NBENCH) > /dev/null
+	$(MEMORY) --output=recursive-mono-mem.csv \
+		$(MONORUN) recursive.exe $(NBENCH) > /dev/null
 	gzip -c recursive.exe |wc -c > recursive-mono-size.csv
 	
 build:

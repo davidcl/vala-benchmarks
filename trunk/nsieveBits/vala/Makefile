@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=nsievebits-vala-time.csv \
 		./nsievebits $(NBENCH) > /dev/null
+	$(MEMORY) --output=nsievebits-vala-mem.csv \
+		./nsievebits $(NBENCH) > /dev/null
 	$(STRIP) ./nsievebits
 	gzip -c ./nsievebits |wc -c > nsievebits-vala-size.csv
 

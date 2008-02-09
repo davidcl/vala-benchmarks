@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=binarytrees-plain-C-time.csv \
 		./binarytrees $(NBENCH) > /dev/null
+	$(MEMORY) --output=binarytrees-plain-C-mem.csv \
+		./binarytrees $(NBENCH) > /dev/null
 	$(STRIP) ./binarytrees
 	gzip -c ./binarytrees |wc -c > binarytrees-plain-C-size.csv
 

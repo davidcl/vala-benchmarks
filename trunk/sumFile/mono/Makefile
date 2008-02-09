@@ -15,6 +15,8 @@ bench: build
 	gzip -dc ../$(GZINFILE) > ../$(INFILE) ;
 	$(TIME) --output=sumFile-mono-time.csv \
 		$(MONORUN) sumcol.exe <../$(INFILE) > /dev/null ;
+	$(MEMORY) --output=sumFile-mono-mem.csv \
+		$(MONORUN) sumcol.exe <../$(INFILE) > /dev/null ;
 	gzip -c sumcol.exe |wc -c > mandelbrot-mono-size.csv
 	
 build:
