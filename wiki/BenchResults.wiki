@@ -21,10 +21,10 @@ Copyright (C) 2002-2007 Novell, Inc and Contributors. www.mono-project.com
 
   == gcc -v : ==
 {{{
-gcc version 4.2.3 20071123 (prerelease) (Debian 4.2.2-4)
+gcc version 4.2.3 20080114 (prerelease) (Debian 4.2.2-7)
 }}}
 
-  == valac : ==
+  == valac --version : ==
 {{{
 Vala 0.1.6
 }}}
@@ -34,29 +34,29 @@ Vala 0.1.6
 
 http://vala-benchmarks.googlecode.com/svn/trunk/bench-time.png
 
-||BenchName||Mono||Vala||plain-C||
-||mandelbrot||29.24||8.69||7.51||
-||partialSums||34.21||21.08||21.07||
-||recursive||20.35||9.02||8.33||
-||binaryTrees||19.44||8.20||5.60||
-||sumFile||15.93||9.01||8.31||
-||fannkuch||15.96||6.83||6.35||
-||spectralNorm||30.01||20.04||19.76||
-||nsieve||23.75||22.24||22.77||
+||BenchName||Mono||Vala||plain-C||C++||
+||mandelbrot||29.19||8.75||7.39||9.47||
+||partialSums||34.29||21.05||21.16||21.33||
+||recursive||17.92||8.91||8.20||7.63||
+||binaryTrees||19.77||7.94||5.59||7.10||
+||sumFile||15.89||8.76||8.19||10.79||
+||fannkuch||15.97||6.84||6.36||7.87||
+||spectralNorm||29.91||20.01||19.65||19.84||
+||nsieve||23.20||21.61||21.69||22.05||
 
 = Size results =
 
 http://vala-benchmarks.googlecode.com/svn/trunk/bench-size.png
 
-||BenchName||Mono||Vala||plain-C||
-||mandelbrot||1281||2589||2237||
-||partialSums||1411||4810||4333||
-||recursive||1398||4939||4791||
-||binaryTrees||1465||3890||4003||
-||sumFile||1093||2278||1880||
-||fannkuch||1375||3554||2902||
-||spectralNorm||1418||3281||3648||
-||nsieve||1175||2057||1995||
+||BenchName||Mono||Vala||plain-C||C++||
+||mandelbrot||1282||2599||2246||3974||
+||partialSums||1414||4819||4441||3074||
+||recursive||1401||4949||4801||6490||
+||binaryTrees||1463||3902||4013||4592||
+||sumFile||1093||2287||1890||2494||
+||fannkuch||1379||3562||2913||4114||
+||spectralNorm||1421||3289||3656||4896||
+||nsieve||1177||2066||2005||2727||
 
 = Memory consumed results =
 
