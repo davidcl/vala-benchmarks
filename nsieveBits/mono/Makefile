@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=nsievebits-mono-time.csv \
 		$(MONORUN) nsievebits.exe $(NBENCH) > /dev/null
+	$(MEMORY) --output=nsievebits-mono-mem.csv \
+		$(MONORUN) nsievebits.exe $(NBENCH) > /dev/null
 	gzip -c nsievebits.exe |wc -c > nsievebits-mono-size.csv
 	
 build:

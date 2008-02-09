@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=mandelbrot-mono-time.csv \
 		$(MONORUN) mandelbrot.exe $(NBENCH) > /dev/null
+	$(MEMORY) --output=mandelbrot-mono-mem.csv \
+		$(MONORUN) mandelbrot.exe $(NBENCH) > /dev/null
 	gzip -c mandelbrot.exe |wc -c > mandelbrot-mono-size.csv
 	
 build:

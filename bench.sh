@@ -1,14 +1,16 @@
 #! /bin/sh
 
 # Init
-echo "BenchName;Mono;Vala;plain-C" > bench-time.csv
-echo "BenchName;Mono;Vala;plain-C" > bench-size.csv
+echo "BenchName;Mono;Vala;plain-C;C++" > bench-time.csv
+echo "BenchName;Mono;Vala;plain-C;C++" > bench-size.csv
+echo "BenchName;Mono;Vala;plain-C;C++" > bench-mem.csv
 
 # Loop
 for dir in $*
 do	
 	echo $dir';'$(cat `find ./$dir/ |grep time.csv` |tr '\n' ';' |sed 's/;$//') >> bench-time.csv
 	echo $dir';'$(cat `find ./$dir/ |grep size.csv` |tr '\n' ';' |sed 's/;$//') >> bench-size.csv
+	# echo $dir';'$(cat `find ./$dir/ |grep mem.csv` |tr '\n' ';' |sed 's/;$//') >> bench-mem.csv
 done;
 
 # (warning: just a note)

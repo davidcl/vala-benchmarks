@@ -15,6 +15,8 @@ bench: build
 	gzip -cd ../$(GZINFILE) > ../$(INFILE)
 	$(TIME) --output=sumFile-vala-time.csv \
 		./sumcol <../$(INFILE) > /dev/null
+	$(MEMORY) --output=sumFile-vala-mem.csv \
+		./sumcol <../$(INFILE) > /dev/null
 	$(STRIP) ./sumcol
 	gzip -c ./sumcol |wc -c > sumFile-vala-size.csv
 

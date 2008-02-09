@@ -15,6 +15,8 @@ bench: build
 	gzip -dc ../$(GZINFILE) > ../$(INFILE)
 	$(TIME) --output=sumFile-plain-C-time.csv \
 		./sumcol <../$(INFILE) > /dev/null
+	$(MEMORY) --output=sumFile-plain-C-mem.csv \
+		./sumcol <../$(INFILE) > /dev/null
 	$(STRIP) ./sumcol
 	gzip -c ./sumcol |wc -c > sumFile-plain-C-size.csv
 

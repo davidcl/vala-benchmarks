@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=partialSums-vala-time.csv \
                 ./partialsums $(NBENCH) > /dev/null
+	$(MEMORY) --output=partialSums-vala-mem.csv \
+                ./partialsums $(NBENCH) > /dev/null
 	$(STRIP) ./partialsums
 	gzip -c ./partialsums |wc -c > partialsums-vala-size.csv
 

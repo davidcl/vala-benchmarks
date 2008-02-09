@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=fannkuch-plain-C-time.csv \
 		./fannkuch $(NBENCH) > /dev/null
+	$(MEMORY) --output=fannkuch-plain-C-mem.csv \
+		./fannkuch $(NBENCH) > /dev/null
 	$(STRIP) ./fannkuch
 	gzip -c ./fannkuch |wc -c > fannkuch-plain-C-size.csv
 

@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=fasta-plain-C-time.csv \
 		./fasta $(NBENCH) > /dev/null
+	$(MEMORY) --output=fasta-plain-C-mem.csv \
+		./fasta $(NBENCH) > /dev/null
 	$(STRIP) ./fasta
 	gzip -c ./fasta |wc -c > fasta-plain-C-size.csv
 

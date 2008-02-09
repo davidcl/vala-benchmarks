@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=fasta-vala-time.csv \
 		./fasta $(NBENCH) > /dev/null
+	$(MEMORY) --output=fasta-vala-mem.csv \
+		./fasta $(NBENCH) > /dev/null
 	$(STRIP) ./fasta
 	gzip -c ./fasta |wc -c > fasta-vala-size.csv
 

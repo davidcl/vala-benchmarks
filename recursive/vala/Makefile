@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=recursive-vala-time.csv \
 		./recursive $(NBENCH) > /dev/null
+	$(MEMORY) --output=recursive-vala-mem.csv \
+		./recursive $(NBENCH) > /dev/null
 	$(STRIP) ./recursive
 	gzip -c ./recursive |wc -c > recursive-vala-size.csv
 

@@ -14,6 +14,8 @@ test: build
 bench: build
 	$(TIME) --output=binarytrees-mono-time.csv \
 		$(MONORUN) binarytrees.exe $(NBENCH) > /dev/null
+	$(MEMORY) --output=binarytrees-mono-mem.csv \
+		$(MONORUN) binarytrees.exe $(NBENCH) > /dev/null
 	gzip -c binarytrees.exe |wc -c > binarytrees-mono-size.csv
 	
 build:
