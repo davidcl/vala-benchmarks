@@ -44,40 +44,35 @@ public class Fasta : Object {
 		"AGGCGGAGGTTGCAGTGAGCCGAGATCGCGCCACTGCACTCC" +
 		"AGCCTGGGCGACAGAGCGAGACTCCGTCTCAAAAA";
 
-	class Frequency : Object{
-		public char c {get; set construct;}
-		public double p {get; set construct;}
-
-		public Frequency (char c, double p) {
-			this.c = c;
-			this.p = p;
-		}
+	struct Frequency {
+		public char c;
+		public double p;
 	}
 	
 	static Frequency[] IUB = {
-		new Frequency ('a', 0.27)
-			,new Frequency ('c', 0.12)
-			,new Frequency ('g', 0.12)
-			,new Frequency ('t', 0.27)
+			 {'a', 0.27}
+			,{'c', 0.12}
+			,{'g', 0.12}
+			,{'t', 0.27}
 
-			,new Frequency ('B', 0.02)
-			,new Frequency ('D', 0.02)
-			,new Frequency ('H', 0.02)
-			,new Frequency ('K', 0.02)
-			,new Frequency ('M', 0.02)
-			,new Frequency ('N', 0.02)
-			,new Frequency ('R', 0.02)
-			,new Frequency ('S', 0.02)
-			,new Frequency ('V', 0.02)
-			,new Frequency ('W', 0.02)
-			,new Frequency ('Y', 0.02)
+			,{'B', 0.02}
+			,{'D', 0.02}
+			,{'H', 0.02}
+			,{'K', 0.02}
+			,{'M', 0.02}
+			,{'N', 0.02}
+			,{'R', 0.02}
+			,{'S', 0.02}
+			,{'V', 0.02}
+			,{'W', 0.02}
+			,{'Y', 0.02}
 	};
 
 	static Frequency[] HomoSapiens = {
-		new Frequency ('a', 0.3029549426680)
-			,new Frequency ('c', 0.1979883004921)
-			,new Frequency ('g', 0.1975473066391)
-			,new Frequency ('t', 0.3015094502008)
+			 {'a', 0.3029549426680}
+			,{'c', 0.1979883004921}
+			,{'g', 0.1975473066391}
+			,{'t', 0.3015094502008}
 	};
 
 	
