@@ -25,11 +25,11 @@ typedef struct _FastaClass FastaClass;
 typedef struct _FastaPrivate FastaPrivate;
 
 struct _Fasta {
-	GObject parent;
+	GObject parent_instance;
 	FastaPrivate * priv;
 };
 struct _FastaClass {
-	GObjectClass parent;
+	GObjectClass parent_class;
 };
 
 Fasta* fasta_new (void);
