@@ -15,10 +15,12 @@ class NBody {
       for (int i=0; i<n; i++)
          bodies.Advance(0.01);
       stdout.printf("%0.9f\n",bodies.Energy());
+      
+      return 0;
    }
 }
 
-public class NBodySystem : Object{
+public class NBodySystem : Object {
    private Body[] bodies;
 
    construct {
