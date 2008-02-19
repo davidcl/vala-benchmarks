@@ -26,7 +26,7 @@ gcc version 4.2.3 20080114 (prerelease) (Debian 4.2.2-7)
 
   == valac --version : ==
 {{{
-Vala 0.1.6
+Vala 0.1.7 (SVN 1019)
 }}}
 
 
