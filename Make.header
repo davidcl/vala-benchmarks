@@ -8,8 +8,8 @@ SHELL = /bin/sh
 # PATH
 GCC := /usr/bin/gcc
 GPP := /usr/bin/g++
-VALAC := /usr/bin/valac
-#VALAC := /opt/vala/bin/valac
+#VALAC := /usr/bin/valac
+VALAC := /usr/local/bin/valac
 MONOC := /usr/bin/mcs
 MONORUN := /usr/bin/mono
 TIME := /usr/bin/time -f "%e"
@@ -18,9 +18,6 @@ MEMORY := /bin/true # disable mem bench
 STRIP := /usr/bin/strip -s
 
 # Compiler Options
-#GCCOPTS = -O3 -funroll-loops -ffast-math -fomit-frame-pointer \
-#          -ftree-vectorize -ftracer -lm -msse -msse2 -mfpmath=sse \
-#          `pkg-config --cflags --libs gobject-2.0`
 GCCOPTS = -O3 -funroll-loops -ffast-math -fomit-frame-pointer \
           -ftracer -lm -msse -msse2 -mfpmath=sse \
           `pkg-config --cflags --libs gobject-2.0`
@@ -33,6 +30,7 @@ MONORUNOPTS = -O=all --aot
 # Benchmarks to make (same name as directories)
 BENCHS = mandelbrot partialSums recursive binaryTrees sumFile \
 	 fannkuch spectralNorm nsieve nBody #startup
+#BENCHS = nBody
 LANGS = mono plain-C vala C++
 
 ############################################################

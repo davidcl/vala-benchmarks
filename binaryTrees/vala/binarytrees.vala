@@ -25,7 +25,7 @@ public class BinaryTrees : Object {
 		
 		for(int depth = minDepth; depth <= maxDepth; depth += 2)
 		{
-			int iterations = Math.pow(2, maxDepth - depth + minDepth);
+			double iterations = Math.pow(2, maxDepth - depth + minDepth);
 			
 			check = 0;
 			for(int i =1; i<= iterations; i++)

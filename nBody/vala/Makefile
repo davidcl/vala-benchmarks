@@ -9,7 +9,7 @@ all: clean build test bench
 test: build
 	./nbody $(NTEST) > $(FILE)
 	$(if diff $(FILE) ../$(FILE), @echo ">> nBody Vala: OK",\
-	 	@echo ">> nBody Vala: Failed")
+		@echo ">> nBody Vala: Failed")
 
 bench: build
 	$(TIME) --output=nbody-vala-time.csv \
