@@ -10,4 +10,4 @@ For background information see N-body problem. Useful symplectic integrators are
 
 = Status =
 
-Not Planned
+Complete but need optimizations.
