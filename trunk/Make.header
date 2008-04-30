@@ -8,8 +8,8 @@ SHELL = /bin/sh
 # PATH
 GCC := /usr/bin/gcc
 GPP := /usr/bin/g++
-#VALAC := /usr/bin/valac
-VALAC := /usr/local/bin/valac
+VALAC := /usr/bin/valac
+#VALAC := /usr/local/bin/valac
 MONOC := /usr/bin/mcs
 MONORUN := /usr/bin/mono
 TIME := /usr/bin/time -f "%e"

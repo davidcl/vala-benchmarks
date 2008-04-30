@@ -12,7 +12,7 @@ public class SumCol : Object
 		int MAXLINELEN = 128;
 		
 		int sum = 0;
-		String line = new String.sized(MAXLINELEN);
+		StringBuilder line = new StringBuilder.sized(MAXLINELEN);
 		
 		while(stdin.gets(line.str,MAXLINELEN) != null)
 		{
