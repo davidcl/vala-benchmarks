@@ -7,26 +7,19 @@ The generated results can be found on the on the SVN :
 
 = Versions =
 
-  == mono -V : ==
+  == mono --version : ==
 {{{
-Mono JIT compiler version 1.2.6 (tarball)
-Copyright (C) 2002-2007 Novell, Inc and Contributors. www.mono-project.com
-	TLS:           __thread
-	GC:            Included Boehm (with typed GC)
-	SIGSEGV:       altstack
-	Notifications: epoll
-	Architecture:  x86
-	Disabled:      none
+Mono C# compiler version 1.2.6.0
 }}}
 
   == gcc -v : ==
 {{{
-gcc version 4.2.3 20080114 (prerelease) (Debian 4.2.2-7)
+gcc (GCC) 4.2.3 (Debian 4.2.3-3)
 }}}
 
   == valac --version : ==
 {{{
-Vala 0.1.7 (SVN 1019)
+Vala 0.3.1
 }}}
 
 
@@ -35,30 +28,30 @@ Vala 0.1.7 (SVN 1019)
 http://vala-benchmarks.googlecode.com/svn/trunk/bench-time.png
 
 ||BenchName||Mono||Vala||plain-C||C++||
-||mandelbrot||29.35||8.71||7.44||9.52||
-||partialSums||34.51||21.06||21.10||21.34||
-||recursive||17.76||8.61||8.28||7.84||
-||binaryTrees||19.44||7.86||5.63||7.13||
-||sumFile||15.86||8.82||8.15||10.75||
-||fannkuch||15.97||6.81||6.36||7.86||
-||spectralNorm||29.82||20.06||19.68||19.77||
-||nsieve||23.00||21.53||21.71||22.03||
-||nBody||34.72||30.12||15.27||17.09||
+||mandelbrot||29.23||8.76||7.42||9.49||
+||partialSums||34.44||21.06||21.13||21.36||
+||recursive||17.99||8.61||8.27||7.63||
+||binaryTrees||19.12||7.85||5.62||7.12||
+||sumFile||15.79||8.85||8.15||11.09||
+||fannkuch||15.91||6.81||6.34||7.84||
+||spectralNorm||29.89||20.20||19.67||19.78||
+||nsieve||22.68||21.25||21.30||21.76||
+||nBody||28.46||30.18||15.29||17.10||
 
 = Size results =
 
 http://vala-benchmarks.googlecode.com/svn/trunk/bench-size.png
 
 ||BenchName||Mono||Vala||plain-C||C++||
-||mandelbrot||1280||2593||2242||3972||
-||partialSums||1419||4813||4439||3073||
-||recursive||1398||4833||4708||6490||
-||binaryTrees||1465||4301||4176||4590||
-||sumFile||1092||2283||1887||2489||
-||fannkuch||1377||3557||2909||4111||
-||spectralNorm||1419||3286||3654||4899||
-||nsieve||1174||2063||2003||2723||
-||nBody||2213||5591||3802||5193||
+||mandelbrot||1282||2559||2209||3940||
+||partialSums||1415||4779||4404||3040||
+||recursive||1397||4800||4671||6444||
+||binaryTrees||1464||4352||4142||4554||
+||sumFile||1090||2252||1852||2455||
+||fannkuch||1377||3523||2873||4079||
+||spectralNorm||1418||3253||3619||4864||
+||nsieve||1170||2029||1966||2691||
+||nBody||2212||5554||3762||5159||
 
 = Memory consumed results =
 
