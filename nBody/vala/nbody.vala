@@ -5,7 +5,7 @@
 */
 using GLib;
 
-class NBody {
+class NBody : Object {
    public static int main(string[] args) {
       int n = (args.length > 0)?args[1].to_int():10000;
 
@@ -95,8 +95,7 @@ public class NBodySystem : Object {
    }
 }
 
-
-public class Body : Object {
+public struct Body {
 
    const double SOLAR_MASS = 4 * 3.141592653589793 * 3.141592653589793;
    const double DAYS_PER_YEAR = 365.24;
@@ -109,10 +108,8 @@ public class Body : Object {
    public double vz;
    public double mass;
 
-   construct  {}
-
    public static Body Jupiter() {
-      Body p = new Body();
+      Body p = Body();
       p.x = 4.84143144246472090e+00;
       p.y = -1.16032004402742839e+00;
       p.z = -1.03622044471123109e-01;
@@ -124,7 +121,7 @@ public class Body : Object {
    }
 
    public static Body Saturn() {
-      Body p = new Body();
+      Body p = Body();
       p.x = 8.34336671824457987e+00;
       p.y = 4.12479856412430479e+00;
       p.z = -4.03523417114321381e-01;
@@ -136,7 +133,7 @@ public class Body : Object {
    }
 
    public static Body Uranus() {
-      Body p = new Body();
+      Body p = Body();
       p.x = 1.28943695621391310e+01;
       p.y = -1.51111514016986312e+01;
       p.z = -2.23307578892655734e-01;
@@ -148,7 +145,7 @@ public class Body : Object {
    }
 
    public static Body Neptune() {
-      Body p = new Body();
+      Body p = Body();
       p.x = 1.53796971148509165e+01;
       p.y = -2.59193146099879641e+01;
       p.z = 1.79258772950371181e-01;
@@ -160,7 +157,7 @@ public class Body : Object {
    }
 
    public static Body Sun() {
-      Body p = new Body();
+      Body p = Body();
       p.mass = SOLAR_MASS;
       return p;
    }
