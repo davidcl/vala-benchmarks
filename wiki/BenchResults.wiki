@@ -28,29 +28,29 @@ Vala 0.3.4
 http://vala-benchmarks.googlecode.com/svn/trunk/bench-time.png
 
 ||BenchName||Mono||Vala||plain-C||C++||
-||mandelbrot||110.28||8.74||7.46||9.46||
-||partialSums||33.60||21.06||21.11||21.33||
-||recursive||17.81||8.61||8.29||7.66||
-||binaryTrees||12.11||5.60||7.12||
-||sumFile||14.61||8.77||8.14||11.02||
-||fannkuch||16.05||6.81||6.34||7.90||
-||spectralNorm||29.89||20.19||19.67||19.92||
-||nsieve||22.94||21.41||21.58||21.81||
-||nBody||34.60||16.56||15.27||17.20||
+||mandelbrot||32.59||8.69||7.39||9.61||
+||partialSums||33.56||21.05||21.09||21.33||
+||recursive||17.70||8.67||8.29||7.67||
+||binaryTrees||27.34||18.95||13.17||16.54||
+||sumFile||14.88||8.81||8.18||11.10||
+||fannkuch||16.01||6.81||6.37||7.84||
+||spectralNorm||29.83||20.18||19.74||19.84||
+||nsieve||22.73||21.31||21.40||21.80||
+||nBody||28.50||14.70||15.26||17.02||
 
 = Size results =
 
 http://vala-benchmarks.googlecode.com/svn/trunk/bench-size.png
 
 ||BenchName||Mono||Vala||plain-C||C++||
-||mandelbrot||1281||2575||2223||3955||
-||partialSums||1415||4794||4419||3054||
-||recursive||1399||4815||4688||6459||
-||binaryTrees||1467||4156||4573||
-||sumFile||1092||2267||1865||2470||
-||fannkuch||1376||3536||2889||4092||
-||spectralNorm||1415||3265||3634||4886||
-||nsieve||1170||2043||1981||2706||
+||mandelbrot||1280||2575||2223||3955||
+||partialSums||1412||4794||4419||3054||
+||recursive||1401||4815||4688||6459||
+||binaryTrees||1466||4179||4156||4573||
+||sumFile||1090||2267||1865||2470||
+||fannkuch||1378||3536||2889||4092||
+||spectralNorm||1418||3265||3634||4886||
+||nsieve||1172||2043||1981||2706||
 ||nBody||2213||5194||3783||5175||
 
 = Memory consumed results =
