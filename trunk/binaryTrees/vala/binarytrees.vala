@@ -6,7 +6,7 @@
 */
 using GLib;
 
-public class BinaryTrees : Object {
+public class BinaryTrees {
 	
 	const int minDepth = 4;
 	
@@ -34,7 +34,7 @@ public class BinaryTrees : Object {
 				check += (TreeNode.bottomUpTree(-i,depth)).itemCheck();
 			}
 		
-			stdout.printf("%d\t trees of depth %d\t check: %li\n",
+			stdout.printf("%f\t trees of depth %d\t check: %li\n",
 							iterations*2, depth, check);		
 		}
 		
@@ -44,17 +44,20 @@ public class BinaryTrees : Object {
 		return 0;
 	}
 	
+	[Compact]
 	class TreeNode {
 
 		public long item;
-		public TreeNode left;
-		public TreeNode right;
+		public TreeNode? left;
+		public TreeNode? right;
 		
 		public TreeNode.create_with_item(long item){
 			this.item = item;
+			this.left = null;
+			this.right = null;
 		}
 		
-		public TreeNode( TreeNode# left, TreeNode# right, long item)  {
+		public TreeNode( TreeNode #left, TreeNode #right, long item)  {
 			this.left = #left;
 			this.right = #right;
 			this.item = item;
