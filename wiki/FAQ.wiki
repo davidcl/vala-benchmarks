@@ -1,4 +1,4 @@
-#summary The place where all the questions have a response
+#summary The place where all questions have a response.
 #labels Featured
 
 === Have you planned to add other platforms/environments ? ===
