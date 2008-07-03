@@ -1,5 +1,5 @@
 #summary Allocate and deallocate many many binary trees N=17
-#labels Featured,Complete
+#labels Complete
 
 = Rules =
 Each program should
