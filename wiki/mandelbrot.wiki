@@ -1,5 +1,5 @@
 #summary Generate Mandelbrot set portable bitmap file N=5,500
-#labels Featured,Complete
+#labels Complete
 
 = Rules =
 
