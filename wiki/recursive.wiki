@@ -1,5 +1,5 @@
 #summary Naive recursive-algorithms: ack fib tak N=12
-#labels Featured,Complete
+#labels Complete
 
 = Rules =
 
