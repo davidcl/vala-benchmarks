@@ -1,5 +1,5 @@
 #summary Indexed-access to boolean-sequence N=14
-#labels Featured,Complete
+#labels Complete
 
 = Rules =
 
