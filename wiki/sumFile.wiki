@@ -1,5 +1,5 @@
 #summary Read lines, parse and sum integers N=21,000
-#labels Featured,Complete
+#labels Complete
 
 = Rules =
 
