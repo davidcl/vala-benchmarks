@@ -1,5 +1,5 @@
 #summary Send messages between linked threads N=15,000
-#labels Featured,Not-Planned
+#labels Not-Planned
 
 = Rules =
 
