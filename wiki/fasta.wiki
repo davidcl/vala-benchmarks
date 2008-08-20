@@ -1,5 +1,5 @@
 #summary Generate and write random DNA sequences N=25,000,000
-#labels Featured,Planned
+#labels Planned
 
 = Rules =
 
