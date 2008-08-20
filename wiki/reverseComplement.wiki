@@ -1,5 +1,5 @@
 #summary Read DNA sequences - write their reverse-complement N=2,500,000
-#labels Featured,Not-Planned
+#labels Not-Planned
 
 = Rules =
 
