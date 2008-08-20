@@ -1,5 +1,5 @@
 #summary Search for solutions to shape packing puzzle N=2,098
-#labels Featured,Not-Planned
+#labels Not-Planned
 
 = Rules =
 
