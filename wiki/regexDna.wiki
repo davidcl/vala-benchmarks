@@ -1,5 +1,5 @@
 #summary Match DNA 8-mers and substitute nucleotides for IUB codes N=500,000
-#labels Featured,Not-Planned
+#labels Not-Planned
 
 = Rules =
 
