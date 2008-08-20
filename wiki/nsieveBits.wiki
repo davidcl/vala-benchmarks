@@ -1,5 +1,5 @@
 #summary Indexed-access to bit-values N=11
-#labels Featured,Not-Planned
+#labels Not-Planned
 
 = Rules =
 Each program should count the prime numbers from 2 to M, using the same naïve Sieve of Eratosthenes algorithm:
