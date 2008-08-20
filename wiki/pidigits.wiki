@@ -1,5 +1,5 @@
 #summary Streaming arbitrary-precision arithmetic N=2,500
-#labels Featured,Not-Planned
+#labels Not-Planned
 
 = Rules =
 
