@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) nsievebits.exe $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> nsieveBits mono: OK",\
+	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> nsieveBits mono: OK",\
 	 	@echo ">> nsieveBits mono: Failed")
 
 bench: build

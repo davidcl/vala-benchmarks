@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	./partialsums $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> partialSums plain-C: OK",\
+	$(if $(diff $(FILE) ../$(FILE)), @echo ">> partialSums plain-C: OK",\
 	 	@echo ">> partialSums plain-C: Failed")
 
 bench: build

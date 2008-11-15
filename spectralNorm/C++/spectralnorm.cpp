@@ -8,6 +8,7 @@
 // Compile: g++ -O3 -o spectralnorm spectralnorm.cpp
 
 #include <cmath>
+#include <cstdlib>
 #include <vector>
 #include <iostream>
 #include <iomanip>

@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	./spectralnorm $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> spectralNorm plain-C: OK",\
+	$(if $(diff $(FILE) ../$(FILE)), @echo ">> spectralNorm plain-C: OK",\
 	 	@echo ">> spectralNorm plain-C: Failed")
 
 bench: build

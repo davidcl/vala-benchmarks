@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) sumcol.exe <../$(INTESTFILE) > $(OUTFILE)
-	$(if diff $(OUTFILE) ../$(OUTFILE), @echo ">> sumFile mono: OK",\
+	$(if $(diff $(OUTFILE) ../$(OUTFILE)), @echo ">> sumFile mono: OK",\
 	 	@echo ">> sumFile mono: Failed")
 
 bench: build

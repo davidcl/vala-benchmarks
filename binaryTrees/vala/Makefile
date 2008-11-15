@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	./binarytrees $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> binaryTrees Vala: OK",\
+	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> binaryTrees Vala: OK",\
 		@echo ">> binaryTrees Vala: Failed")
 
 bench: build

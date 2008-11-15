@@ -8,9 +8,9 @@ echo "BenchName;C++;Mono;plain-C;Vala" > bench-mem.csv
 # Loop
 for dir in $*
 do	
-	echo $dir';'$(cat `find ./$dir/ |grep time.csv` |sort -d |tr '\n' ';' |sed 's/;$//') >> bench-time.csv
-	echo $dir';'$(cat `find ./$dir/ |grep size.csv` |sort -d |tr '\n' ';' |sed 's/;$//') >> bench-size.csv
-	# echo $dir';'$(cat `find ./$dir/ |grep mem.csv` |sort -d |tr '\n' ';' |sed 's/;$//') >> bench-mem.csv
+	echo $dir';'$(cat `find ./$dir/ |sort -d |grep time.csv` |tr '\n' ';' |sed 's/;$//') >> bench-time.csv
+	echo $dir';'$(cat `find ./$dir/ |sort -d |grep size.csv` |tr '\n' ';' |sed 's/;$//') >> bench-size.csv
+	# echo $dir';'$(cat `find ./$dir/ |sort -d |grep mem.csv` |tr '\n' ';' |sed 's/;$//') >> bench-mem.csv
 done;
 
 # (warning: just a note)

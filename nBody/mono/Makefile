@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) nbody.exe $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> nBody mono: OK",\
+	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> nBody mono: OK",\
 	 	@echo ">> nBody mono: Failed")
 
 bench: build

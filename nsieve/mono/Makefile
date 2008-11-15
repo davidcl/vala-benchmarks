@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) nsieve.exe $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> nsieve mono: OK",\
+	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> nsieve mono: OK",\
 	 	@echo ">> nsieve mono: Failed")
 
 bench: build

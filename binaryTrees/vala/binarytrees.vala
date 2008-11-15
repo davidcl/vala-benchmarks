@@ -57,7 +57,7 @@ public class BinaryTrees {
 			this.right = null;
 		}
 		
-		public TreeNode( TreeNode #left, TreeNode #right, long item)  {
+		public TreeNode(TreeNode #left, TreeNode #right, long item)  {
 			this.left = #left;
 			this.right = #right;
 			this.item = item;
@@ -78,9 +78,9 @@ public class BinaryTrees {
 		}
 		
 		public long itemCheck()  {
-			// deallocatation active
-			if(left==null) return item;
+			if(this.left == null) return item;
 			else return item + left.itemCheck() - right.itemCheck();
 		}
 	}
 }
+

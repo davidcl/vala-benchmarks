@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	./sumcol <../$(INTESTFILE) > $(OUTFILE)
-	$(if diff $(OUTFILE) ../$(OUTFILE), @echo ">> sumFile plain-C: OK",\
+	$(if $(diff $(OUTFILE) ../$(OUTFILE)), @echo ">> sumFile plain-C: OK",\
 	 	@echo ">> sumFile plain-C: Failed")
 
 bench: build
