@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	./fasta $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> fasta Vala: OK",\
+	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> fasta Vala: OK",\
 	 	@echo ">> fasta Vala: Failed")
 
 bench: build

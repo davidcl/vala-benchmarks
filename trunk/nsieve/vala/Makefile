@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	./nsieve $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> nsieve Vala: OK",\
+	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> nsieve Vala: OK",\
 	 	@echo ">> nsieve Vala: Failed")
 
 bench: build

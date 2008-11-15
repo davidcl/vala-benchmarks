@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) spectralnorm.exe $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> spectralNorm mono: OK",\
+	$(if $(diff $(FILE) ../$(FILE)), @echo ">> spectralNorm mono: OK",\
 	 	@echo ">> spectralNorm mono: Failed")
 
 bench: build

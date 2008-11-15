@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) binarytrees.exe $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> binaryTrees mono: OK",\
+	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> binaryTrees mono: OK",\
 	 	@echo ">> binaryTrees mono: Failed")
 
 bench: build

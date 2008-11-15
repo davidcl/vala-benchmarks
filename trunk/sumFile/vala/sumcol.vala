@@ -5,18 +5,18 @@
 */
 using GLib;
 
-public class SumCol : Object
-{
+public class SumCol {
+
 	public static int main(string [] args)
 	{
 		int MAXLINELEN = 128;
 		
 		int sum = 0;
-		StringBuilder line = new StringBuilder.sized(MAXLINELEN);
+		char[] str = new char [MAXLINELEN];
 		
-		while(stdin.gets(line.str,MAXLINELEN) != null)
+		while(stdin.gets(str) != null)
 		{
-			sum += line.str.to_int();
+			sum += ((string)str).to_int();
 		}
 		
 		stdout.printf("%d\n",sum);

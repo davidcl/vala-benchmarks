@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	./nbody $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> nBody C++: OK",\
+	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> nBody C++: OK",\
 	 	@echo ">> nBody C++: Failed")
 
 bench: build

@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) fannkuch.exe $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> fannkuch mono: OK",\
+	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> fannkuch mono: OK",\
 	 	@echo ">> fannkuch mono: Failed")
 
 bench: build

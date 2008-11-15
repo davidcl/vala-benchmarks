@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) mandelbrot.exe $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> mandelbrot mono: OK",\
+	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> mandelbrot mono: OK",\
 	 	@echo ">> mandelbrot mono: Failed")
 
 bench: build

@@ -23,7 +23,7 @@ GCCOPTS = -O3 -funroll-loops -ffast-math -fomit-frame-pointer \
           `pkg-config --cflags --libs gobject-2.0`
 GPPOPTS = -O3 -funroll-loops -ffast-math -fomit-frame-pointer \
           -ftracer -lm -msse -msse2 -mfpmath=sse
-VALACOPTS = -C --disable-assert --disable-checking
+VALACOPTS = -C --disable-assert
 MONOCOPTS = 
 MONORUNOPTS = -O=all --aot
 

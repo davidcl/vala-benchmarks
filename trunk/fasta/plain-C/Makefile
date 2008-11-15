@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	./fasta $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> fasta plain-C: OK",\
+	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> fasta plain-C: OK",\
 	 	@echo ">> fasta plain-C: Failed")
 
 bench: build

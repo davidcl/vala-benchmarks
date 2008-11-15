@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) fasta.exe $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> fasta mono: OK",\
+	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> fasta mono: OK",\
 	 	@echo ">> fasta mono: Failed")
 
 bench: build

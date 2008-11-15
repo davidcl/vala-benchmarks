@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) partialsums.exe $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> partialSums mono: OK",\
+	$(if $(diff $(FILE) ../$(FILE)), @echo ">> partialSums mono: OK",\
 	 	@echo ">> partialSums mono: Failed")
 
 bench: build

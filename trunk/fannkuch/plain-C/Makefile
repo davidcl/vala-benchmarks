@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	./fannkuch $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> fannkuch plain-C: OK",\
+	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> fannkuch plain-C: OK",\
 	 	@echo ">> fannkuch plain-C: Failed")
 
 bench: build

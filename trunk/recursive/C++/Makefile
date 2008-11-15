@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	./recursive $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> recursive C++: OK",\
+	$(if $(diff $(FILE) ../$(FILE)), @echo ">> recursive C++: OK",\
 	 	@echo ">> recursive C++: Failed")
 
 bench: build

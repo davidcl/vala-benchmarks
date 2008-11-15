@@ -8,7 +8,7 @@ all: clean build test bench
 
 test: build
 	./nsievebits $(NTEST) > $(FILE)
-	$(if diff $(FILE) ../$(FILE), @echo ">> nsieveBits plain-C: OK",\
+	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> nsieveBits plain-C: OK",\
 	 	@echo ">> nsieveBits plain-C: Failed")
 
 bench: build

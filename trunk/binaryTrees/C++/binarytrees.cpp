@@ -6,7 +6,7 @@
  * Contributed by Jon Harrop
  * Modified by Alex Mizrahi
  */
-
+#include <stdlib.h>
 #include <iostream>
 
 struct Node {
