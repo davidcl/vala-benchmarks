@@ -19,7 +19,7 @@ gcc (GCC) 4.2.4 (Debian 4.2.4-2)
 
   == valac --version : ==
 {{{
-Vala 0.3.4
+Vala 0.5.2
 }}}
 
 
@@ -27,31 +27,32 @@ Vala 0.3.4
 
 http://vala-benchmarks.googlecode.com/svn/trunk/bench-time.png
 
-||BenchName||Mono||Vala||plain-C||C++||
-||mandelbrot||32.59||8.69||7.39||9.61||
-||partialSums||33.56||21.05||21.09||21.33||
-||recursive||17.70||8.67||8.29||7.67||
-||binaryTrees||27.34||18.95||13.17||16.54||
-||sumFile||14.88||8.81||8.18||11.10||
-||fannkuch||16.01||6.81||6.37||7.84||
-||spectralNorm||29.83||20.18||19.74||19.84||
-||nsieve||22.73||21.31||21.40||21.80||
-||nBody||28.50||14.70||15.26||17.02||
+||BenchName||C++||Mono||plain-C||Vala||
+||mandelbrot||8.67||32.73||7.41||7.86||
+||partialSums||19.59||33.74||21.01||21.06||
+||recursive||7.77||17.91||5.08||5.24||
+||binaryTrees||16.56||27.32||13.15||18.94||
+||sumFile||10.00||14.34||7.99||8.96||
+||fannkuch||6.77||16.11||7.32||8.40||
+||spectralNorm||19.34||29.88||19.17||19.52||
+||nsieve||19.82||21.19||19.93||19.74||
+||nBody||16.76||31.67||15.78||15.58||
 
 = Size results =
 
 http://vala-benchmarks.googlecode.com/svn/trunk/bench-size.png
 
-||BenchName||Mono||Vala||plain-C||C++||
-||mandelbrot||1280||2575||2223||3955||
-||partialSums||1412||4794||4419||3054||
-||recursive||1401||4815||4688||6459||
-||binaryTrees||1466||4179||4156||4573||
-||sumFile||1090||2267||1865||2470||
-||fannkuch||1378||3536||2889||4092||
-||spectralNorm||1418||3265||3634||4886||
-||nsieve||1172||2043||1981||2706||
-||nBody||2213||5194||3783||5175||
+
+||BenchName||C++||Mono||plain-C||Vala||
+||mandelbrot||4402||1283||2225||2579||
+||partialSums||2962||1414||5783||6217||
+||recursive||6334||1400||5563||5987||
+||binaryTrees||5540||1467||4548||5784||
+||sumFile||2601||1093||1848||3815||
+||fannkuch||5910||1378||4121||4704||
+||spectralNorm||6256||1418||3903||3466||
+||nsieve||2650||1170||1969||1993||
+||nBody||6051||2213||3670||4987||
 
 = Memory consumed results =
 
