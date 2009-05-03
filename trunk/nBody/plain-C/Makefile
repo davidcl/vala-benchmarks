@@ -12,7 +12,7 @@ test: build
 	echo ">> nBody plain-C: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=nbody-plain-C-time.csv \
 		./nbody $(NBENCH) > /dev/null
 	$(MEMORY) --output=nbody-plain-C-mem.csv \

@@ -12,7 +12,7 @@ test: build
 	echo ">> nBody vala: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=nbody-vala-time.csv \
 		./nbody $(NBENCH) > /dev/null
 	$(MEMORY) --output=nbody-vala-mem.csv \

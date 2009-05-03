@@ -12,7 +12,7 @@ test: build
 	echo ">> spectralNorm mono: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=spectralnorm-mono-time.csv \
 		$(MONORUN) spectralnorm.exe $(NBENCH) > /dev/null
 	$(MEMORY) --output=spectralnorm-mono-mem.csv \

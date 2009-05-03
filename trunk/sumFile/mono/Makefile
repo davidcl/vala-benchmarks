@@ -12,7 +12,7 @@ test: build
 	echo ">> sumFile mono: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	gzip -dc ../$(GZINFILE) > ../$(INFILE) ;
 	$(TIME) --output=sumFile-mono-time.csv \
 		$(MONORUN) sumcol.exe <../$(INFILE) > /dev/null ;

@@ -12,7 +12,7 @@ test: build
 	echo ">> nsieve vala: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=nsieve-vala-time.csv \
 		./nsieve $(NBENCH) > /dev/null
 	$(MEMORY) --output=nsieve-vala-mem.csv \

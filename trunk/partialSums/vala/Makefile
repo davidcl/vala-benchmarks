@@ -12,7 +12,7 @@ test: build
 	echo ">> partialSums vala: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=partialSums-vala-time.csv \
                 ./partialsums $(NBENCH) > /dev/null
 	$(MEMORY) --output=partialSums-vala-mem.csv \

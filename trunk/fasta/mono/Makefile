@@ -12,7 +12,7 @@ test: build
 	echo ">> fasta mono: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=fasta-mono-time.csv \
 		$(MONORUN) fasta.exe $(NBENCH) > /dev/null
 	$(MEMORY) --output=fasta-mono-mem.csv \

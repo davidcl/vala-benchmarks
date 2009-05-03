@@ -12,7 +12,7 @@ test: build
 	echo ">> recursive mono: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=recursive-mono-time.csv \
 		$(MONORUN) recursive.exe $(NBENCH) > /dev/null
 	$(MEMORY) --output=recursive-mono-mem.csv \

@@ -12,7 +12,7 @@ test: build
 	echo ">> sumFile vala: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	gzip -cd ../$(GZINFILE) > ../$(INFILE)
 	$(TIME) --output=sumFile-vala-time.csv \
 		./sumcol <../$(INFILE) > /dev/null

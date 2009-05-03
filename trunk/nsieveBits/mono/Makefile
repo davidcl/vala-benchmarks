@@ -12,7 +12,7 @@ test: build
 	echo ">> nsieveBits mono: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=nsievebits-mono-time.csv \
 		$(MONORUN) nsievebits.exe $(NBENCH) > /dev/null
 	$(MEMORY) --output=nsievebits-mono-mem.csv \

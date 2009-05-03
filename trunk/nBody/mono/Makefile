@@ -12,7 +12,7 @@ test: build
 	echo ">> nBody mono: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=nbody-mono-time.csv \
 		$(MONORUN) nbody.exe $(NBENCH) > /dev/null
 	$(MEMORY) --output=nbody-mono-mem.csv \

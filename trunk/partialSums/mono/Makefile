@@ -12,7 +12,7 @@ test: build
 	echo ">> partialSums mono: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=partialSums-mono-time.csv \
                 $(MONORUN) partialsums.exe $(NBENCH) > /dev/null
 	$(MEMORY) --output=partialSums-mono-mem.csv \

@@ -12,7 +12,7 @@ test: build
 	echo ">> nsieve plain-C: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=nsieve-plain-C-time.csv \
 		./nsieve $(NBENCH) > /dev/null
 	$(MEMORY) --output=nsieve-plain-C-mem.csv \

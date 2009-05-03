@@ -12,7 +12,7 @@ test: build
 	echo ">> mandelbrot plain-C: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=mandelbrot-plain-C-time.csv \
 		./mandelbrot $(NBENCH) > /dev/null
 	$(MEMORY) --output=mandelbrot-plain-C-mem.csv \

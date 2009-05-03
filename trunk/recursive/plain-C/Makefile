@@ -12,7 +12,7 @@ test: build
 	echo ">> recursive plain-C: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=recursive-plain-C-time.csv \
 		./recursive $(NBENCH) > /dev/null
 	$(MEMORY) --output=recursive-plain-C-mem.csv \

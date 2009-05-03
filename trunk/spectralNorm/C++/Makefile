@@ -12,7 +12,7 @@ test: build
 	echo ">> spectralNorm C++: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=spectralnorm-C++-time.csv \
 		./spectralnorm $(NBENCH) > /dev/null
 	$(MEMORY) --output=spectralnorm-C++-mem.csv \
