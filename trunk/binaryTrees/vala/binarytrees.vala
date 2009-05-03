@@ -18,7 +18,7 @@ public class BinaryTrees {
 		int stretchDepth = maxDepth + 1;
 		
 		long check = (TreeNode.bottomUpTree(0,stretchDepth)).itemCheck();
-		stdout.printf("stretch tree of depth %d\t check: %li",
+		stdout.printf("stretch tree of depth %d\t check: %li\n",
 						stretchDepth, check);
 		
 		TreeNode longLivedTree = TreeNode.bottomUpTree(0,maxDepth);
@@ -34,7 +34,7 @@ public class BinaryTrees {
 				check += (TreeNode.bottomUpTree(-i,depth)).itemCheck();
 			}
 		
-			stdout.printf("%f\t trees of depth %d\t check: %li\n",
+			stdout.printf("%.0f\t trees of depth %d\t check: %li\n",
 							iterations*2, depth, check);		
 		}
 		
@@ -43,7 +43,8 @@ public class BinaryTrees {
 		
 		return 0;
 	}
-	
+
+// /** DEBUG
 	[Compact]
 	class TreeNode {
 
@@ -57,9 +58,9 @@ public class BinaryTrees {
 			this.right = null;
 		}
 		
-		public TreeNode(TreeNode #left, TreeNode #right, long item)  {
-			this.left = #left;
-			this.right = #right;
+		public TreeNode(owned TreeNode left, owned TreeNode right, long item)  {
+			this.left = (owned) left;
+			this.right = (owned) right;
 			this.item = item;
 		}
 		
@@ -82,5 +83,48 @@ public class BinaryTrees {
 			else return item + left.itemCheck() - right.itemCheck();
 		}
 	}
+// DEBUG */
+	
+ /** DEBUG
+
+	struct TreeNode {
+
+		public long item;
+		public TreeNode? left;
+		public TreeNode? right;
+		
+		public TreeNode.create_with_item(long item){
+			this.item = item;
+			this.left = null;
+			this.right = null;
+		}
+		
+		public TreeNode(TreeNode left, TreeNode right, long item)  {
+			this.left = left;
+			this.right = right;
+			this.item = item;
+		}
+		
+		public static TreeNode bottomUpTree (long item, int depth)  {
+			if( depth > 0)
+			{
+				return TreeNode(
+					bottomUpTree(2*item-1, depth-1) , 
+					bottomUpTree(2*item, depth-1), 
+					item );
+			}
+			else
+			{
+				return TreeNode.create_with_item(item);
+			}
+		}
+		
+		public long itemCheck()  {
+			if(this.left == null) return item;
+			else return item + left.itemCheck() - right.itemCheck();
+		}
+	}
+ DEBUG **/
+
 }
 
