@@ -30,14 +30,14 @@ clean: $(BENCH_LANG_CLEAN)
 #
 
 $(BENCH_LANG_TEST):
-	$(MAKE) -r -C $(@:%_test=%) test
+	$(MAKE) -C $(@:%_test=%) test
 
 $(BENCH_LANG_BUILD):
-	$(MAKE) -r -C $(@:%_build=%) build
+	$(MAKE) -C $(@:%_build=%) build
 
 $(BENCH_LANG_BENCH):
-	$(MAKE) -r -C $(@:%_bench=%) bench
+	$(MAKE) -C $(@:%_bench=%) bench
 
 $(BENCH_LANG_CLEAN):
-	$(MAKE) -r -C $(@:%_clean=%) clean
+	$(MAKE) -C $(@:%_clean=%) clean
 
