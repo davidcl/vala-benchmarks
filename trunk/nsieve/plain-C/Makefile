@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./nsieve $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> nsieve plain-C: OK",\
-	 	@echo ">> nsieve plain-C: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> nsieve plain-C: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=nsieve-plain-C-time.csv \

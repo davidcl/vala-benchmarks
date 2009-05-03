@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./nsieve $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> nsieve Vala: OK",\
-	 	@echo ">> nsieve Vala: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> nsieve vala: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=nsieve-vala-time.csv \

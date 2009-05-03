@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) mandelbrot.exe $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> mandelbrot mono: OK",\
-	 	@echo ">> mandelbrot mono: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> mandelbrot mono: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=mandelbrot-mono-time.csv \

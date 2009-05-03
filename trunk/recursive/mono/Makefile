@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) recursive.exe $(NTEST) > $(FILE)
-	$(if $(diff $(FILE) ../$(FILE)), @echo ">> recursive mono: OK",\
-	 	@echo ">> recursive mono: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> recursive mono: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=recursive-mono-time.csv \

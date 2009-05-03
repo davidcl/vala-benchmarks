@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) nsievebits.exe $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> nsieveBits mono: OK",\
-	 	@echo ">> nsieveBits mono: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> nsieveBits mono: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=nsievebits-mono-time.csv \

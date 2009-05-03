@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./sumcol <../$(INTESTFILE) > $(OUTFILE)
-	$(if $(diff $(OUTFILE) ../$(OUTFILE)), @echo ">> sumFile C++: OK",\
-	 	@echo ">> sumFile C++: Failed")
+	@if ! cmp $(OUTFILE) ../$(OUTFILE); then \
+	echo ">> sumFile C++: Failed"; exit 1; \
+	fi
 
 bench: build
 	gzip -dc ../$(GZINFILE) > ../$(INFILE)

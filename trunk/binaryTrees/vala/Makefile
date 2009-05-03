@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./binarytrees $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> binaryTrees Vala: OK",\
-		@echo ">> binaryTrees Vala: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> binaryTrees vala: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=binarytrees-vala-time.csv \

@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./recursive $(NTEST) > $(FILE)
-	$(if $(diff $(FILE) ../$(FILE)), @echo ">> recursive plain-C: OK",\
-	 	@echo ">> recursive plain-C: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> recursive plain-C: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=recursive-plain-C-time.csv \

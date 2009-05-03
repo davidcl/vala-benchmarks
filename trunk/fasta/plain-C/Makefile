@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./fasta $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> fasta plain-C: OK",\
-	 	@echo ">> fasta plain-C: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> fasta plain-C: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=fasta-plain-C-time.csv \

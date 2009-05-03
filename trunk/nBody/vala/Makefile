@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./nbody $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> nBody Vala: OK",\
-		@echo ">> nBody Vala: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> nBody vala: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=nbody-vala-time.csv \

@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) nsieve.exe $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> nsieve mono: OK",\
-	 	@echo ">> nsieve mono: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> nsieve mono: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=nsieve-mono-time.csv \

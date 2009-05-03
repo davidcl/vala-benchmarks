@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) nbody.exe $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> nBody mono: OK",\
-	 	@echo ">> nBody mono: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> nBody mono: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=nbody-mono-time.csv \

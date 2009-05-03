@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./nbody $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> nBody C++: OK",\
-	 	@echo ">> nBody C++: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> nBody C++: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=nbody-C++-time.csv \

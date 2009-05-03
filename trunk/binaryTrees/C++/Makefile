@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./binarytrees $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> binaryTrees C++: OK",\
-	 	@echo ">> binaryTrees C++: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> binaryTrees C++: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=binarytrees-C++-time.csv \
@@ -23,5 +24,5 @@ build:
 	$(GPP) $(GPPOPTS) binarytrees.cpp -o binarytrees
 
 clean:
-	rm -fr *~ binarytrees $(FILE) *.csv
+	rm -fr *~ binarytrees $(FILE) *.csv *.diff
 

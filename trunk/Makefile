@@ -2,19 +2,42 @@
 
 include Make.header
 
-all: build test bench
+TARGETS := build test bench clean
+BENCH_LANG_DIR := $(foreach bench, $(BENCHS), $(foreach lang, $(LANGS), $(bench)/$(lang)))
 
-build test:
-	-@for directory in $(BENCHS); do ( cd $$directory; \
-	for dir in $(LANGS); do ( cd $$dir; make $@ ); done  ); done
+BENCH_LANG_TEST := $(addsuffix _test, $(BENCH_LANG_DIR))
+BENCH_LANG_BUILD := $(addsuffix _build, $(BENCH_LANG_DIR))
+BENCH_LANG_BENCH := $(addsuffix _bench, $(BENCH_LANG_DIR))
+BENCH_LANG_CLEAN := $(addsuffix _clean, $(BENCH_LANG_DIR))
+
+
+all: $(TARGETS)
+
+test: $(BENCH_LANG_TEST)
+	@echo ">> All tests passed successfully"
+
+build: $(BENCH_LANG_BUILD)
 	
-bench:
-	-@for directory in $(BENCHS); do ( cd $$directory; \
-	for dir in $(LANGS); do ( cd $$dir; make $@ ); done  ); done
+bench: $(BENCH_LANG_BENCH)
 	$(SH) ./bench.sh $(BENCHS)
 
-clean:
-	-@for directory in $(BENCHS); do ( cd $$directory; \
-	for dir in $(LANGS); do ( cd $$dir; make $@ ); done  ); done
+clean: $(BENCH_LANG_CLEAN)
 #	rm -fr *.csv
 	rm -fr `find . -iname "*~"`
+
+#
+# Rules to go to sub-directories
+#
+
+$(BENCH_LANG_TEST):
+	$(MAKE) -r -C $(@:%_test=%) test
+
+$(BENCH_LANG_BUILD):
+	$(MAKE) -r -C $(@:%_build=%) build
+
+$(BENCH_LANG_BENCH):
+	$(MAKE) -r -C $(@:%_bench=%) bench
+
+$(BENCH_LANG_CLEAN):
+	$(MAKE) -r -C $(@:%_clean=%) clean
+
