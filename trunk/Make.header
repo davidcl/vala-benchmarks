@@ -47,4 +47,5 @@ default:
 	@echo "  make clean     # remove generated/data files"
 
 .EXPORT_ALL_VARIABLES:
+.PHONY: test bench clean
 
