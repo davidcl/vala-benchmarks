@@ -64,7 +64,6 @@ class Fannkuch
             r++;
          }
       }
-      //return 0;
    }
 
 	public static int main(string[] args){
