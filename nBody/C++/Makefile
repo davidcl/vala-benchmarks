@@ -12,7 +12,7 @@ test: build
 	echo ">> nBody C++: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=nbody-C++-time.csv \
 		./nbody $(NBENCH) > /dev/null
 	$(MEMORY) --output=nbody-C++-mem.csv \

@@ -12,7 +12,7 @@ test: build
 	echo ">> binaryTrees vala: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=binarytrees-vala-time.csv \
 		./binarytrees $(NBENCH) > /dev/null
 	$(MEMORY) --output=binarytrees-vala-mem.csv \

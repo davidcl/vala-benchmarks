@@ -12,7 +12,7 @@ test: build
 	echo ">> fasta vala: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=fasta-vala-time.csv \
 		./fasta $(NBENCH) > /dev/null
 	$(MEMORY) --output=fasta-vala-mem.csv \

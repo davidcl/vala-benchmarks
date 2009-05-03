@@ -12,7 +12,7 @@ test: build
 	echo ">> spectralNorm vala: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=spectralnorm-vala-time.csv \
 		./spectralnorm $(NBENCH) > /dev/null
 	$(MEMORY) --output=spectralnorm-vala-mem.csv \

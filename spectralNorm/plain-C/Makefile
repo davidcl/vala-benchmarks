@@ -12,7 +12,7 @@ test: build
 	echo ">> spectralNorm plain-C: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=spectralnorm-plain-C-time.csv \
 		./spectralnorm $(NBENCH) > /dev/null
 	$(MEMORY) --output=spectralnorm-plain-C-mem.csv \

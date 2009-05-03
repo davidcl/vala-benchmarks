@@ -12,7 +12,7 @@ test: build
 	echo ">> partialSums plain-C: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=partialSums-plain-C-time.csv \
                 ./partialsums $(NBENCH) > /dev/null
 	$(MEMORY) --output=partialSums-plain-C-mem.csv \

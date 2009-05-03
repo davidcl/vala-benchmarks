@@ -12,7 +12,7 @@ test: build
 	echo ">> recursive vala: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=recursive-vala-time.csv \
 		./recursive $(NBENCH) > /dev/null
 	$(MEMORY) --output=recursive-vala-mem.csv \

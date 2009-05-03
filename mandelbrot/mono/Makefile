@@ -12,7 +12,7 @@ test: build
 	echo ">> mandelbrot mono: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=mandelbrot-mono-time.csv \
 		$(MONORUN) mandelbrot.exe $(NBENCH) > /dev/null
 	$(MEMORY) --output=mandelbrot-mono-mem.csv \

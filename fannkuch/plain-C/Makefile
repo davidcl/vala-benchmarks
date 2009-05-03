@@ -12,7 +12,7 @@ test: build
 	echo ">> fannkuch plain-C: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=fannkuch-plain-C-time.csv \
 		./fannkuch $(NBENCH) > /dev/null
 	$(MEMORY) --output=fannkuch-plain-C-mem.csv \

@@ -12,7 +12,7 @@ test: build
 	echo ">> binaryTrees mono: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=binarytrees-mono-time.csv \
 		$(MONORUN) binarytrees.exe $(NBENCH) > /dev/null
 	$(MEMORY) --output=binarytrees-mono-mem.csv \

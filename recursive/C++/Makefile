@@ -12,7 +12,7 @@ test: build
 	echo ">> recursive C++: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=recursive-C++-time.csv \
 		./recursive $(NBENCH) > /dev/null
 	$(MEMORY) --output=recursive-C++-mem.csv \

@@ -12,7 +12,7 @@ test: build
 	echo ">> mandelbrot C++: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=mandelbrot-C++-time.csv \
 		./mandelbrot $(NBENCH) > /dev/null
 	$(MEMORY) --output=mandelbrot-C++-mem.csv \

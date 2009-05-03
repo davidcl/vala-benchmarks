@@ -12,7 +12,7 @@ test: build
 	echo ">> fasta C++: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=fasta-C++-time.csv \
 		./fasta $(NBENCH) > /dev/null
 	$(MEMORY) --output=fasta-C++-mem.csv \

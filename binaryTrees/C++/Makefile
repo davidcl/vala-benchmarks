@@ -12,7 +12,7 @@ test: build
 	echo ">> binaryTrees C++: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=binarytrees-C++-time.csv \
 		./binarytrees $(NBENCH) > /dev/null
 	$(MEMORY) --output=binarytrees-C++-mem.csv \

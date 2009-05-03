@@ -12,7 +12,7 @@ test: build
 	echo ">> fannkuch mono: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=fannkuch-mono-time.csv \
 		$(MONORUN) fannkuch.exe $(NBENCH) > /dev/null
 	gzip -c fannkuch.exe |wc -c > fannkuch-mono-size.csv

@@ -12,7 +12,7 @@ test: build
 	echo ">> mandelbrot vala: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=mandelbrot-vala-time.csv \
 		./mandelbrot $(NBENCH) > /dev/null
 	$(MEMORY) --output=mandelbrot-vala-mem.csv \

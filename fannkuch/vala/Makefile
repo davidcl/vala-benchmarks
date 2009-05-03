@@ -12,7 +12,7 @@ test: build
 	echo ">> fannkuch vala: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=fannkuch-vala-time.csv \
 		./fannkuch $(NBENCH) > /dev/null
 	$(MEMORY) --output=fannkuch-vala-mem.csv \

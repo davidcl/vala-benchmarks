@@ -12,7 +12,7 @@ test: build
 	echo ">> partialSums C++: Failed"; exit 1; \
 	fi
 
-bench: build
+bench: build test
 	$(TIME) --output=partialSums-C++-time.csv \
                 ./partialsums $(NBENCH) > /dev/null
 	$(MEMORY) --output=partialSums-C++-mem.csv \
