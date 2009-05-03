@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./partialsums $(NTEST) > $(FILE)
-	$(if $(diff $(FILE) ../$(FILE)), @echo ">> partialSums Vala: OK",\
-	 	@echo ">> partialSums Vala: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> partialSums vala: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=partialSums-vala-time.csv \

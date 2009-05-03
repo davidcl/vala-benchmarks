@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./partialsums $(NTEST) > $(FILE)
-	$(if $(diff $(FILE) ../$(FILE)), @echo ">> partialSums C++: OK",\
-	 	@echo ">> partialSums C++: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> partialSums C++: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=partialSums-C++-time.csv \

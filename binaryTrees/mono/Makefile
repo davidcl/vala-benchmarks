@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) binarytrees.exe $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> binaryTrees mono: OK",\
-	 	@echo ">> binaryTrees mono: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> binaryTrees mono: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=binarytrees-mono-time.csv \

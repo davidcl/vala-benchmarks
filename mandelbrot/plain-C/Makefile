@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./mandelbrot $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> mandelbrot plain-C: OK",\
-	 	@echo ">> mandelbrot plain-C: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> mandelbrot plain-C: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=mandelbrot-plain-C-time.csv \

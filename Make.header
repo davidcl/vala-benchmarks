@@ -2,6 +2,7 @@
 #
 # This file contains some global definitions
 # 
+
 # Customize this file for your system
 SHELL = /bin/sh
 
@@ -29,8 +30,8 @@ MONORUNOPTS = -O=all --aot
 
 # Benchmarks to make (same name as directories)
 BENCHS = mandelbrot partialSums recursive binaryTrees sumFile \
-	 fannkuch spectralNorm nsieve nBody #startup
-#BENCHS = binaryTrees
+	 fannkuch spectralNorm nsieve #nBody #startup
+#BENCHS = nBody
 LANGS = mono plain-C vala C++
 
 ############################################################

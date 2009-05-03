@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) spectralnorm.exe $(NTEST) > $(FILE)
-	$(if $(diff $(FILE) ../$(FILE)), @echo ">> spectralNorm mono: OK",\
-	 	@echo ">> spectralNorm mono: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> spectralNorm mono: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=spectralnorm-mono-time.csv \

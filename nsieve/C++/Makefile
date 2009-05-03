@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./nsieve $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> nsieve C++: OK",\
-	 	@echo ">> nsieve C++: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> nsieve C++: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=nsieve-C++-time.csv \

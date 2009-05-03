@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) sumcol.exe <../$(INTESTFILE) > $(OUTFILE)
-	$(if $(diff $(OUTFILE) ../$(OUTFILE)), @echo ">> sumFile mono: OK",\
-	 	@echo ">> sumFile mono: Failed")
+	@if ! cmp $(OUTFILE) ../$(OUTFILE); then \
+	echo ">> sumFile mono: Failed"; exit 1; \
+	fi
 
 bench: build
 	gzip -dc ../$(GZINFILE) > ../$(INFILE) ;

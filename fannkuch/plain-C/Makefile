@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./fannkuch $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> fannkuch plain-C: OK",\
-	 	@echo ">> fannkuch plain-C: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> fannkuch plain-C: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=fannkuch-plain-C-time.csv \

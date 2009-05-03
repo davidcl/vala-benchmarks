@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) fannkuch.exe $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> fannkuch mono: OK",\
-	 	@echo ">> fannkuch mono: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> fannkuch mono: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=fannkuch-mono-time.csv \

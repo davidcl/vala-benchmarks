@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) fasta.exe $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> fasta mono: OK",\
-	 	@echo ">> fasta mono: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> fasta mono: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=fasta-mono-time.csv \

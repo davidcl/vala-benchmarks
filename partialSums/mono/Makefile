@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	$(MONORUN) partialsums.exe $(NTEST) > $(FILE)
-	$(if $(diff $(FILE) ../$(FILE)), @echo ">> partialSums mono: OK",\
-	 	@echo ">> partialSums mono: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> partialSums mono: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=partialSums-mono-time.csv \

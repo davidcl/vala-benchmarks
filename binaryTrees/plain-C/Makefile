@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./binarytrees $(NTEST) > $(FILE)
-	$(if $($(diff $(FILE) ../$(FILE))), @echo ">> binaryTrees plain-C: OK",\
-	 	@echo ">> binaryTrees plain-C: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> binaryTrees plain-C: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=binarytrees-plain-C-time.csv \

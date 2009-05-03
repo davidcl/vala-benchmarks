@@ -8,8 +8,9 @@ all: clean build test bench
 
 test: build
 	./spectralnorm $(NTEST) > $(FILE)
-	$(if $(diff $(FILE) ../$(FILE)), @echo ">> spectralNorm C++: OK",\
-	 	@echo ">> spectralNorm C++: Failed")
+	@if ! cmp $(FILE) ../$(FILE); then \
+	echo ">> spectralNorm C++: Failed"; exit 1; \
+	fi
 
 bench: build
 	$(TIME) --output=spectralnorm-C++-time.csv \
