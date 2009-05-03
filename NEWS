@@ -1,3 +1,8 @@
+vala-benchmarks 0.3.0
+=====================
+* make test works as expected
+* svg is generated
+
 vala-benchmarks 0.1.8
 =====================
  * Adding C++
