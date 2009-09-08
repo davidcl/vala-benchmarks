@@ -60,87 +60,97 @@ SVG Driver by B.Traill
 <path d="M432 293l0 -5.04" fill="none"/>
 <path d="M72 288l360 0" fill="none"/>
 </g><g style="&sw;0.5;&fs;8pt;&ae;">
-<text x="61.20" y="99.00" stroke="none">mandelbrot</text>
-<path d="M66.96 96l5.04 0" fill="none"/>
-<text x="61.20" y="123.00" stroke="none">partialSums</text>
-<path d="M66.96 120l5.04 0" fill="none"/>
-<text x="61.20" y="147.00" stroke="none">recursive</text>
-<path d="M66.96 144l5.04 0" fill="none"/>
-<text x="61.20" y="171.00" stroke="none">binaryTrees</text>
-<path d="M66.96 168l5.04 0" fill="none"/>
-<text x="61.20" y="195.00" stroke="none">sumFile</text>
-<path d="M66.96 192l5.04 0" fill="none"/>
-<text x="61.20" y="219.00" stroke="none">fannkuch</text>
-<path d="M66.96 216l5.04 0" fill="none"/>
-<text x="61.20" y="243.00" stroke="none">spectralNorm</text>
-<path d="M66.96 240l5.04 0" fill="none"/>
-<text x="61.20" y="267.00" stroke="none">nsieve</text>
-<path d="M66.96 264l5.04 0" fill="none"/>
+<text x="61.20" y="96.60" stroke="none">mandelbrot</text>
+<path d="M66.96 93.6l5.04 0" fill="none"/>
+<text x="61.20" y="118.20" stroke="none">partialSums</text>
+<path d="M66.96 115.2l5.04 0" fill="none"/>
+<text x="61.20" y="139.80" stroke="none">recursive</text>
+<path d="M66.96 136.8l5.04 0" fill="none"/>
+<text x="61.20" y="161.40" stroke="none">binaryTrees</text>
+<path d="M66.96 158.4l5.04 0" fill="none"/>
+<text x="61.20" y="183.00" stroke="none">sumFile</text>
+<path d="M66.96 180l5.04 0" fill="none"/>
+<text x="61.20" y="204.60" stroke="none">fannkuch</text>
+<path d="M66.96 201.6l5.04 0" fill="none"/>
+<text x="61.20" y="226.20" stroke="none">spectralNorm</text>
+<path d="M66.96 223.2l5.04 0" fill="none"/>
+<text x="61.20" y="247.80" stroke="none">nsieve</text>
+<path d="M66.96 244.8l5.04 0" fill="none"/>
+<text x="61.20" y="269.40" stroke="none">nBody</text>
+<path d="M66.96 266.4l5.04 0" fill="none"/>
 <path d="M72 288l0 -216" fill="none"/>
-<path d="M72 94.2l223.8 0l0 -3.6l-223.8 0z" fill="#ff0000" stroke="#ff0000"/>
-<path d="M72 94.2l223.8 0l0 -3.6l-223.8 0l0 3.6" fill="none"/>
-<path d="M72 118.2l151.5 0l0 -3.6l-151.5 0z" fill="#ff0000" stroke="#ff0000"/>
-<path d="M72 118.2l151.5 0l0 -3.6l-151.5 0l0 3.6" fill="none"/>
-<path d="M72 142.2l323.7 0l0 -3.6l-323.7 0z" fill="#ff0000" stroke="#ff0000"/>
-<path d="M72 142.2l323.7 0l0 -3.6l-323.7 0l0 3.6" fill="none"/>
-<path d="M72 166.2l283.8 0l0 -3.6l-283.8 0z" fill="#ff0000" stroke="#ff0000"/>
-<path d="M72 166.2l283.8 0l0 -3.6l-283.8 0l0 3.6" fill="none"/>
-<path d="M72 190.2l132.7 0l0 -3.6l-132.7 0z" fill="#ff0000" stroke="#ff0000"/>
-<path d="M72 190.2l132.7 0l0 -3.6l-132.7 0l0 3.6" fill="none"/>
-<path d="M72 214.2l302.7 0l0 -3.6l-302.7 0z" fill="#ff0000" stroke="#ff0000"/>
-<path d="M72 214.2l302.7 0l0 -3.6l-302.7 0l0 3.6" fill="none"/>
-<path d="M72 238.2l320.9 0l0 -3.6l-320.9 0z" fill="#ff0000" stroke="#ff0000"/>
-<path d="M72 238.2l320.9 0l0 -3.6l-320.9 0l0 3.6" fill="none"/>
-<path d="M72 262.2l135.2 0l0 -3.6l-135.2 0z" fill="#ff0000" stroke="#ff0000"/>
-<path d="M72 262.2l135.2 0l0 -3.6l-135.2 0l0 3.6" fill="none"/>
-<path d="M72 97.8l65.93 0l0 -3.6l-65.93 0z" fill="#ffff00" stroke="#ffff00"/>
-<path d="M72 97.8l65.93 0l0 -3.6l-65.93 0l0 3.6" fill="none"/>
-<path d="M72 121.8l72.82 0l0 -3.6l-72.82 0z" fill="#ffff00" stroke="#ffff00"/>
-<path d="M72 121.8l72.82 0l0 -3.6l-72.82 0l0 3.6" fill="none"/>
-<path d="M72 145.8l72.41 0l0 -3.6l-72.41 0z" fill="#ffff00" stroke="#ffff00"/>
-<path d="M72 145.8l72.41 0l0 -3.6l-72.41 0l0 3.6" fill="none"/>
-<path d="M72 169.8l75.39 0l0 -3.6l-75.39 0z" fill="#ffff00" stroke="#ffff00"/>
-<path d="M72 169.8l75.39 0l0 -3.6l-75.39 0l0 3.6" fill="none"/>
-<path d="M72 193.8l55.9 0l0 -3.6l-55.9 0z" fill="#ffff00" stroke="#ffff00"/>
-<path d="M72 193.8l55.9 0l0 -3.6l-55.9 0l0 3.6" fill="none"/>
-<path d="M72 217.8l71.64 0l0 -3.6l-71.64 0z" fill="#ffff00" stroke="#ffff00"/>
-<path d="M72 217.8l71.64 0l0 -3.6l-71.64 0l0 3.6" fill="none"/>
-<path d="M72 241.8l73.03 0l0 -3.6l-73.03 0z" fill="#ffff00" stroke="#ffff00"/>
-<path d="M72 241.8l73.03 0l0 -3.6l-73.03 0l0 3.6" fill="none"/>
-<path d="M72 265.8l60.38 0l0 -3.6l-60.38 0z" fill="#ffff00" stroke="#ffff00"/>
-<path d="M72 265.8l60.38 0l0 -3.6l-60.38 0l0 3.6" fill="none"/>
-<path d="M72 101.4l114.3 0l0 -3.6l-114.3 0z" fill="#0066cc" stroke="#0066cc"/>
-<path d="M72 101.4l114.3 0l0 -3.6l-114.3 0l0 3.6" fill="none"/>
-<path d="M72 125.4l297.4 0l0 -3.6l-297.4 0z" fill="#0066cc" stroke="#0066cc"/>
-<path d="M72 125.4l297.4 0l0 -3.6l-297.4 0l0 3.6" fill="none"/>
-<path d="M72 149.4l286.1 0l0 -3.6l-286.1 0z" fill="#0066cc" stroke="#0066cc"/>
-<path d="M72 149.4l286.1 0l0 -3.6l-286.1 0l0 3.6" fill="none"/>
-<path d="M72 173.4l233.5 0l0 -3.6l-233.5 0z" fill="#0066cc" stroke="#0066cc"/>
-<path d="M72 173.4l233.5 0l0 -3.6l-233.5 0l0 3.6" fill="none"/>
-<path d="M72 197.4l94.89 0l0 -3.6l-94.89 0z" fill="#0066cc" stroke="#0066cc"/>
-<path d="M72 197.4l94.89 0l0 -3.6l-94.89 0l0 3.6" fill="none"/>
-<path d="M72 221.4l220 0l0 -3.6l-220 0z" fill="#0066cc" stroke="#0066cc"/>
-<path d="M72 221.4l220 0l0 -3.6l-220 0l0 3.6" fill="none"/>
-<path d="M72 245.4l200.2 0l0 -3.6l-200.2 0z" fill="#0066cc" stroke="#0066cc"/>
-<path d="M72 245.4l200.2 0l0 -3.6l-200.2 0l0 3.6" fill="none"/>
-<path d="M72 269.4l101.1 0l0 -3.6l-101.1 0z" fill="#0066cc" stroke="#0066cc"/>
-<path d="M72 269.4l101.1 0l0 -3.6l-101.1 0l0 3.6" fill="none"/>
-<path d="M72 105l131.9 0l0 -3.6l-131.9 0z" fill="#00b200" stroke="#00b200"/>
-<path d="M72 105l131.9 0l0 -3.6l-131.9 0l0 3.6" fill="none"/>
-<path d="M72 129l319.1 0l0 -3.6l-319.1 0z" fill="#00b200" stroke="#00b200"/>
-<path d="M72 129l319.1 0l0 -3.6l-319.1 0l0 3.6" fill="none"/>
-<path d="M72 153l307.3 0l0 -3.6l-307.3 0z" fill="#00b200" stroke="#00b200"/>
-<path d="M72 153l307.3 0l0 -3.6l-307.3 0l0 3.6" fill="none"/>
-<path d="M72 177l306.5 0l0 -3.6l-306.5 0z" fill="#00b200" stroke="#00b200"/>
-<path d="M72 177l306.5 0l0 -3.6l-306.5 0l0 3.6" fill="none"/>
-<path d="M72 201l198.6 0l0 -3.6l-198.6 0z" fill="#00b200" stroke="#00b200"/>
-<path d="M72 201l198.6 0l0 -3.6l-198.6 0l0 3.6" fill="none"/>
-<path d="M72 225l370 0l0 -3.6l-370 0z" fill="#00b200" stroke="#00b200"/>
-<path d="M72 225l370 0l0 -3.6l-370 0l0 3.6" fill="none"/>
-<path d="M72 249l310.4 0l0 -3.6l-310.4 0z" fill="#00b200" stroke="#00b200"/>
-<path d="M72 249l310.4 0l0 -3.6l-310.4 0l0 3.6" fill="none"/>
-<path d="M72 273l198.8 0l0 -3.6l-198.8 0z" fill="#00b200" stroke="#00b200"/>
-<path d="M72 273l198.8 0l0 -3.6l-198.8 0l0 3.6" fill="none"/>
+<path d="M72 91.8l226 0l0 -3.6l-226 0z" fill="#ff0000" stroke="#ff0000"/>
+<path d="M72 91.8l226 0l0 -3.6l-226 0l0 3.6" fill="none"/>
+<path d="M72 113.4l154.1 0l0 -3.6l-154.1 0z" fill="#ff0000" stroke="#ff0000"/>
+<path d="M72 113.4l154.1 0l0 -3.6l-154.1 0l0 3.6" fill="none"/>
+<path d="M72 135l325.7 0l0 -3.6l-325.7 0z" fill="#ff0000" stroke="#ff0000"/>
+<path d="M72 135l325.7 0l0 -3.6l-325.7 0l0 3.6" fill="none"/>
+<path d="M72 156.6l285.7 0l0 -3.6l-285.7 0z" fill="#ff0000" stroke="#ff0000"/>
+<path d="M72 156.6l285.7 0l0 -3.6l-285.7 0l0 3.6" fill="none"/>
+<path d="M72 178.2l135.5 0l0 -3.6l-135.5 0z" fill="#ff0000" stroke="#ff0000"/>
+<path d="M72 178.2l135.5 0l0 -3.6l-135.5 0l0 3.6" fill="none"/>
+<path d="M72 199.8l304.7 0l0 -3.6l-304.7 0z" fill="#ff0000" stroke="#ff0000"/>
+<path d="M72 199.8l304.7 0l0 -3.6l-304.7 0l0 3.6" fill="none"/>
+<path d="M72 221.4l322.9 0l0 -3.6l-322.9 0z" fill="#ff0000" stroke="#ff0000"/>
+<path d="M72 221.4l322.9 0l0 -3.6l-322.9 0l0 3.6" fill="none"/>
+<path d="M72 243l137.9 0l0 -3.6l-137.9 0z" fill="#ff0000" stroke="#ff0000"/>
+<path d="M72 243l137.9 0l0 -3.6l-137.9 0l0 3.6" fill="none"/>
+<path d="M72 264.6l311.7 0l0 -3.6l-311.7 0z" fill="#ff0000" stroke="#ff0000"/>
+<path d="M72 264.6l311.7 0l0 -3.6l-311.7 0l0 3.6" fill="none"/>
+<path d="M72 95.4l66.03 0l0 -3.6l-66.03 0z" fill="#ffff00" stroke="#ffff00"/>
+<path d="M72 95.4l66.03 0l0 -3.6l-66.03 0l0 3.6" fill="none"/>
+<path d="M72 117l72.82 0l0 -3.6l-72.82 0z" fill="#ffff00" stroke="#ffff00"/>
+<path d="M72 117l72.82 0l0 -3.6l-72.82 0l0 3.6" fill="none"/>
+<path d="M72 138.6l72.51 0l0 -3.6l-72.51 0z" fill="#ffff00" stroke="#ffff00"/>
+<path d="M72 138.6l72.51 0l0 -3.6l-72.51 0l0 3.6" fill="none"/>
+<path d="M72 160.2l75.24 0l0 -3.6l-75.24 0z" fill="#ffff00" stroke="#ffff00"/>
+<path d="M72 160.2l75.24 0l0 -3.6l-75.24 0l0 3.6" fill="none"/>
+<path d="M72 181.8l56.06 0l0 -3.6l-56.06 0z" fill="#ffff00" stroke="#ffff00"/>
+<path d="M72 181.8l56.06 0l0 -3.6l-56.06 0l0 3.6" fill="none"/>
+<path d="M72 203.4l71.43 0l0 -3.6l-71.43 0z" fill="#ffff00" stroke="#ffff00"/>
+<path d="M72 203.4l71.43 0l0 -3.6l-71.43 0l0 3.6" fill="none"/>
+<path d="M72 225l73.03 0l0 -3.6l-73.03 0z" fill="#ffff00" stroke="#ffff00"/>
+<path d="M72 225l73.03 0l0 -3.6l-73.03 0l0 3.6" fill="none"/>
+<path d="M72 246.6l60.33 0l0 -3.6l-60.33 0z" fill="#ffff00" stroke="#ffff00"/>
+<path d="M72 246.6l60.33 0l0 -3.6l-60.33 0l0 3.6" fill="none"/>
+<path d="M72 268.2l113.1 0l0 -3.6l-113.1 0z" fill="#ffff00" stroke="#ffff00"/>
+<path d="M72 268.2l113.1 0l0 -3.6l-113.1 0l0 3.6" fill="none"/>
+<path d="M72 99l116.7 0l0 -3.6l-116.7 0z" fill="#0066cc" stroke="#0066cc"/>
+<path d="M72 99l116.7 0l0 -3.6l-116.7 0l0 3.6" fill="none"/>
+<path d="M72 120.6l293.3 0l0 -3.6l-293.3 0z" fill="#0066cc" stroke="#0066cc"/>
+<path d="M72 120.6l293.3 0l0 -3.6l-293.3 0l0 3.6" fill="none"/>
+<path d="M72 142.2l288.5 0l0 -3.6l-288.5 0z" fill="#0066cc" stroke="#0066cc"/>
+<path d="M72 142.2l288.5 0l0 -3.6l-288.5 0l0 3.6" fill="none"/>
+<path d="M72 163.8l235 0l0 -3.6l-235 0z" fill="#0066cc" stroke="#0066cc"/>
+<path d="M72 163.8l235 0l0 -3.6l-235 0l0 3.6" fill="none"/>
+<path d="M72 185.4l96.84 0l0 -3.6l-96.84 0z" fill="#0066cc" stroke="#0066cc"/>
+<path d="M72 185.4l96.84 0l0 -3.6l-96.84 0l0 3.6" fill="none"/>
+<path d="M72 207l224.2 0l0 -3.6l-224.2 0z" fill="#0066cc" stroke="#0066cc"/>
+<path d="M72 207l224.2 0l0 -3.6l-224.2 0l0 3.6" fill="none"/>
+<path d="M72 228.6l202 0l0 -3.6l-202 0z" fill="#0066cc" stroke="#0066cc"/>
+<path d="M72 228.6l202 0l0 -3.6l-202 0l0 3.6" fill="none"/>
+<path d="M72 250.2l103.5 0l0 -3.6l-103.5 0z" fill="#0066cc" stroke="#0066cc"/>
+<path d="M72 250.2l103.5 0l0 -3.6l-103.5 0l0 3.6" fill="none"/>
+<path d="M72 271.8l190.8 0l0 -3.6l-190.8 0z" fill="#0066cc" stroke="#0066cc"/>
+<path d="M72 271.8l190.8 0l0 -3.6l-190.8 0l0 3.6" fill="none"/>
+<path d="M72 102.6l133.2 0l0 -3.6l-133.2 0z" fill="#00b200" stroke="#00b200"/>
+<path d="M72 102.6l133.2 0l0 -3.6l-133.2 0l0 3.6" fill="none"/>
+<path d="M72 124.2l316.3 0l0 -3.6l-316.3 0z" fill="#00b200" stroke="#00b200"/>
+<path d="M72 124.2l316.3 0l0 -3.6l-316.3 0l0 3.6" fill="none"/>
+<path d="M72 145.8l310.4 0l0 -3.6l-310.4 0z" fill="#00b200" stroke="#00b200"/>
+<path d="M72 145.8l310.4 0l0 -3.6l-310.4 0l0 3.6" fill="none"/>
+<path d="M72 167.4l308.3 0l0 -3.6l-308.3 0z" fill="#00b200" stroke="#00b200"/>
+<path d="M72 167.4l308.3 0l0 -3.6l-308.3 0l0 3.6" fill="none"/>
+<path d="M72 189l201.2 0l0 -3.6l-201.2 0z" fill="#00b200" stroke="#00b200"/>
+<path d="M72 189l201.2 0l0 -3.6l-201.2 0l0 3.6" fill="none"/>
+<path d="M72 210.6l368.4 0l0 -3.6l-368.4 0z" fill="#00b200" stroke="#00b200"/>
+<path d="M72 210.6l368.4 0l0 -3.6l-368.4 0l0 3.6" fill="none"/>
+<path d="M72 232.2l288.2 0l0 -3.6l-288.2 0z" fill="#00b200" stroke="#00b200"/>
+<path d="M72 232.2l288.2 0l0 -3.6l-288.2 0l0 3.6" fill="none"/>
+<path d="M72 253.8l201.5 0l0 -3.6l-201.5 0z" fill="#00b200" stroke="#00b200"/>
+<path d="M72 253.8l201.5 0l0 -3.6l-201.5 0l0 3.6" fill="none"/>
+<path d="M72 275.4l256.4 0l0 -3.6l-256.4 0z" fill="#00b200" stroke="#00b200"/>
+<path d="M72 275.4l256.4 0l0 -3.6l-256.4 0l0 3.6" fill="none"/>
 <path d="M201.6 334l0 -7.2l7.2 0l0 7.2z" fill="#ff0000" stroke="#ff0000"/>
 </g><g style="&sw;0.5;&fs;8pt;&as;">
 <text x="216.00" y="334.00" stroke="none">C++</text>
