@@ -9,17 +9,17 @@ The generated results can be found on the on the SVN :
 
   == mono --version : ==
 {{{
-Mono C# compiler version 2.0.1.0
+Mono C# compiler version 2.4.2.3
 }}}
 
   == gcc -v : ==
 {{{
-gcc version 4.3.3 (Debian 4.3.3-3) 
+gcc (Debian 4.3.4-2) 4.3.4
 }}}
 
   == valac --version : ==
 {{{
-Vala 0.7.2
+Vala 0.7.6
 }}}
 
 
@@ -28,28 +28,30 @@ Vala 0.7.2
 http://vala-benchmarks.googlecode.com/svn/trunk/bench-time.png
 
 ||BenchName||C++||Mono||plain-C||Vala||
-||mandelbrot||14.50||54.61||12.39||13.13||
-||partialSums||33.04||56.13||35.00||34.95||
-||recursive||12.94||30.14||8.44||8.72||
-||binaryTrees||27.87||43.87||21.56||30.84||
-||sumFile||17.11||22.89||13.99||15.06||
-||fannkuch||11.46||27.05||11.26||12.44||
-||spectralNorm||32.82||49.82||33.25||33.36||
-||nsieve||25.32||28.03||25.31||25.09||
+||mandelbrot||14.48||47.40||12.38||13.05||
+||partialSums||32.68||56.58||35.11||34.92||
+||recursive||12.87||28.15||8.38||8.61||
+||binaryTrees||27.53||42.62||21.56||30.75||
+||sumFile||16.90||23.70||14.18||15.24||
+||fannkuch||11.18||26.59||12.26||14.23||
+||spectralNorm||32.77||46.58||32.83||36.84||
+||nsieve||25.49||29.31||26.09||25.70||
+||nBody||28.33||43.55||26.02||28.06||
 
 = Size results =
 
 http://vala-benchmarks.googlecode.com/svn/trunk/bench-size.png
 
 ||BenchName||C++||Mono||plain-C||Vala||
-||mandelbrot||4352||1282||2223||2565||
-||partialSums||2946||1416||5782||6204||
-||recursive||6295||1408||5563||5976||
-||binaryTrees||5518||1466||4541||5960||
-||sumFile||2581||1087||1845||3861||
-||fannkuch||5886||1393||4278||7195||
-||spectralNorm||6240||1420||3892||6036||
-||nsieve||2628||1174||1966||3866||
+||mandelbrot||4394||1284||2270||2590||
+||partialSums||2997||1416||5703||6151||
+||recursive||6334||1410||5610||6036||
+||binaryTrees||5555||1463||4570||5994||
+||sumFile||2634||1090||1883||3913||
+||fannkuch||5924||1389||4359||7163||
+||spectralNorm||6279||1420||3927||5604||
+||nsieve||2681||1173||2013||3919||
+||nBody||6061||2199||3710||4986||
 
 = Memory consumed results =
 
