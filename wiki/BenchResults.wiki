@@ -25,7 +25,7 @@ Vala 0.7.6
 
 = Time results = 
 
-http://vala-benchmarks.googlecode.com/svn/trunk/bench-time.png
+http://vala-benchmarks.googlecode.com/svn/trunk/bench-time.svg
 
 ||BenchName||C++||Mono||plain-C||Vala||
 ||mandelbrot||14.48||47.40||12.38||13.05||
@@ -40,7 +40,7 @@ http://vala-benchmarks.googlecode.com/svn/trunk/bench-time.png
 
 = Size results =
 
-http://vala-benchmarks.googlecode.com/svn/trunk/bench-size.png
+http://vala-benchmarks.googlecode.com/svn/trunk/bench-size.svg
 
 ||BenchName||C++||Mono||plain-C||Vala||
 ||mandelbrot||4394||1284||2270||2590||
