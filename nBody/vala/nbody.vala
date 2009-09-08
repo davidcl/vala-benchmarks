@@ -5,7 +5,7 @@
 */
 using GLib;
 
-class NBody : Object {
+public class NBody : Object {
    public static int main(string[] args) {
       int n = (args.length > 0)?args[1].to_int():10000;
 
@@ -21,24 +21,24 @@ class NBody : Object {
 }
 
 public class NBodySystem : Object {
-   private Body[] bodies;
+   public Body[] bodies;
 
    construct {
-      bodies = new Body[]{
-         Body.Sun(),
-         Body.Jupiter(),
-         Body.Saturn(),
-         Body.Uranus(),
-         Body.Neptune()
+      bodies = {
+        Body.Sun(),
+        Body.Jupiter(),
+        Body.Saturn(),
+        Body.Uranus(),
+        Body.Neptune()
       };
-
+   
       double px = 0.0;
       double py = 0.0;
       double pz = 0.0;
-      foreach (Body body in bodies) {
-         px += body.vx * body.mass;
-         py += body.vy * body.mass;
-         pz += body.vz * body.mass;
+      for (int i=0; i < bodies.length; i++) {
+         px += bodies[i].vx * bodies[i].mass;
+         py += bodies[i].vy * bodies[i].mass;
+         pz += bodies[i].vz * bodies[i].mass;
       }
       bodies[0].OffsetMomentum(px,py,pz);
    }
@@ -65,10 +65,10 @@ public class NBodySystem : Object {
          }
       }
 
-      foreach (Body body in bodies) {
-         body.x += dt * body.vx;
-         body.y += dt * body.vy;
-         body.z += dt * body.vz;
+      for (int i=0; i < bodies.length; i++) {
+         bodies[i].x += dt * bodies[i].vx;
+         bodies[i].y += dt * bodies[i].vy;
+         bodies[i].z += dt * bodies[i].vz;
       }
    }
 
@@ -95,8 +95,8 @@ public class NBodySystem : Object {
    }
 }
 
-public struct Body {
-
+[Compact]
+public class Body {	
    const double SOLAR_MASS = 4 * 3.141592653589793 * 3.141592653589793;
    const double DAYS_PER_YEAR = 365.24;
 
@@ -109,7 +109,7 @@ public struct Body {
    public double mass;
 
    public static Body Jupiter() {
-      Body p = Body();
+      Body p = new Body();
       p.x = 4.84143144246472090e+00;
       p.y = -1.16032004402742839e+00;
       p.z = -1.03622044471123109e-01;
@@ -121,7 +121,7 @@ public struct Body {
    }
 
    public static Body Saturn() {
-      Body p = Body();
+      Body p = new Body();
       p.x = 8.34336671824457987e+00;
       p.y = 4.12479856412430479e+00;
       p.z = -4.03523417114321381e-01;
@@ -133,7 +133,7 @@ public struct Body {
    }
 
    public static Body Uranus() {
-      Body p = Body();
+      Body p = new Body();
       p.x = 1.28943695621391310e+01;
       p.y = -1.51111514016986312e+01;
       p.z = -2.23307578892655734e-01;
@@ -145,7 +145,7 @@ public struct Body {
    }
 
    public static Body Neptune() {
-      Body p = Body();
+      Body p =  new Body();
       p.x = 1.53796971148509165e+01;
       p.y = -2.59193146099879641e+01;
       p.z = 1.79258772950371181e-01;
@@ -157,16 +157,15 @@ public struct Body {
    }
 
    public static Body Sun() {
-      Body p = Body();
+      Body p = new Body();
       p.mass = SOLAR_MASS;
       return p;
    }
 
-   public Body OffsetMomentum(double px, double py, double pz) {
+   public void OffsetMomentum(double px, double py, double pz) {
       vx = -px / SOLAR_MASS;
       vy = -py / SOLAR_MASS;
       vz = -pz / SOLAR_MASS;
-      return this;
    }
 }
 

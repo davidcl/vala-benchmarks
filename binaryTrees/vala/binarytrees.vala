@@ -44,7 +44,6 @@ public class BinaryTrees {
 		return 0;
 	}
 
-// /** DEBUG
 	[Compact]
 	class TreeNode {
 
@@ -83,48 +82,5 @@ public class BinaryTrees {
 			else return item + left.itemCheck() - right.itemCheck();
 		}
 	}
-// DEBUG */
-	
- /** DEBUG
-
-	struct TreeNode {
-
-		public long item;
-		public TreeNode? left;
-		public TreeNode? right;
-		
-		public TreeNode.create_with_item(long item){
-			this.item = item;
-			this.left = null;
-			this.right = null;
-		}
-		
-		public TreeNode(TreeNode left, TreeNode right, long item)  {
-			this.left = left;
-			this.right = right;
-			this.item = item;
-		}
-		
-		public static TreeNode bottomUpTree (long item, int depth)  {
-			if( depth > 0)
-			{
-				return TreeNode(
-					bottomUpTree(2*item-1, depth-1) , 
-					bottomUpTree(2*item, depth-1), 
-					item );
-			}
-			else
-			{
-				return TreeNode.create_with_item(item);
-			}
-		}
-		
-		public long itemCheck()  {
-			if(this.left == null) return item;
-			else return item + left.itemCheck() - right.itemCheck();
-		}
-	}
- DEBUG **/
-
 }
 
