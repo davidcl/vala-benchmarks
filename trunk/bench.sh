@@ -24,10 +24,12 @@ done;
 cp ploticus-time.tmpl template
 sed 's/;/\t/g;s/^\(.*\)$/\1\t/' bench-time.csv >> template
 ploticus -svg -o bench-time.svg template
+ploticus -png -o bench-time.png template
 rm template
 #
 cp ploticus-size.tmpl template
 sed 's/;/\t/g;s/^\(.*\)$/\1\t/' bench-size.csv >> template
 ploticus -svg -o bench-size.svg template
+ploticus -png -o bench-size.png template
 rm template
 #
