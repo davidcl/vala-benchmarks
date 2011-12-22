@@ -14,7 +14,7 @@ class recursive
       n--; Console.WriteLine("Tak({0},{1},{2}): {3}", 3*n,2*n,n, Tak(3*n,2*n,n));
 
       Console.WriteLine("Fib(3): {0}", Fib(3));
-      Console.WriteLine("Tak(3.0,2.0,1.0): {0:f1}",Tak(3.0,2.0,1.0));
+      Console.WriteLine("Tak(3.0,2.0,1.0): {0:f1}",Tak(3,2,1));
    }
 
 
